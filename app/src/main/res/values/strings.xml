@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GlobalAngles</string>
+
+    <string name="no_internet_connection">" No internet connection "</string>
+    <string name="couldnt_reach_server">Couldn\'t reach the server!</string>
+    <string name="no_data_found">No Data Found</string>
+    <string name="database_error">There is a problem in database.</string>
+    <string name="p_trmnl_required">P_TRMNL is required.</string>
+    <string name="machine_not_verified">Machine not verified</string>
+    <string name="no_users_found">No Users Found</string>
+    <string name="no_branches_for_the_users">There are no branches for the users.</string>
+    <string name="machine_no_required">P_MACHINE_NO is required</string>
+    <string name="pos_does_not_exist">POS does not exist !</string>
+    <string name="login">Login</string>
+</resources>
