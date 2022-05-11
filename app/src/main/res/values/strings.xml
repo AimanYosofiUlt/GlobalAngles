@@ -47,7 +47,8 @@
     <string name="my_trips">My trips</string>
     <string name="deals">Deals</string>
 
-    <string name="english">en</string>
-    <string name="arabic">ar</string>
-    <string name="tv_change_lang_header">change language</string>
+    <string name="allow_permission_for_storage_access">Allow permission for storage access!</string>
+    <string name="english">English</string>
+    <string name="arabic" translatable="false">Arabic</string>
+    <string name="tv_change_lang_header" />
 </resources>

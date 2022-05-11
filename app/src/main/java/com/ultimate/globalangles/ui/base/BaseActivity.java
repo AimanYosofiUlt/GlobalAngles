@@ -30,6 +30,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import com.ultimate.globalangles.R;
+import com.ultimate.globalangles.app.LocaleHelper;
 import com.ultimate.globalangles.utilities.CommonMethods;
 import com.ultimate.globalangles.utilities.SharedPreferenceHelper;
 
@@ -65,7 +66,7 @@ public abstract class BaseActivity<ViewModel extends BaseViewModel> extends AppC
                 if (Environment.isExternalStorageManager()) {
                     proceed();
                 } else {
-                  //  Toast.makeText(this, this.getString(com.ultimate.ecommerce.R.string.allow_permission_for_storage_access), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, this.getString(R.string.allow_permission_for_storage_access), Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -177,10 +178,10 @@ public abstract class BaseActivity<ViewModel extends BaseViewModel> extends AppC
 
         switch (CommonMethods.getLanguageId(this)) {
             case "1": // ar
-                LanguagesList[0] = this.getString(com.ultimate.globalangles.R.string.english);
+                LanguagesList[0] = this.getString(R.string.english);
                 break;
             case "2": // en
-                LanguagesList[0] = this.getString(com.ultimate.globalangles.R.string.arabic);
+                LanguagesList[0] = this.getString(R.string.arabic);
 
         }
 
@@ -207,7 +208,6 @@ public abstract class BaseActivity<ViewModel extends BaseViewModel> extends AppC
                 finish();
                 this.startActivity(getIntent());
                 overridePendingTransition(R.anim.rotate_in, R.anim.rotate_out);
-
             }
 
         });
