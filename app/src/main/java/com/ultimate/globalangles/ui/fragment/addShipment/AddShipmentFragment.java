@@ -1,4 +1,4 @@
-package com.ultimate.globalangles.ui.fragment.webView;
+package com.ultimate.globalangles.ui.fragment.addShipment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
-import com.ultimate.globalangles.databinding.FragmentLoginBinding;
+import com.ultimate.globalangles.databinding.FragmentAddShipmentBinding;
 import com.ultimate.globalangles.databinding.FragmentWebviewAffiliateBinding;
 import com.ultimate.globalangles.ui.base.BaseFragment;
 
@@ -16,13 +16,14 @@ import javax.annotation.Nullable;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class WebViewAffiliateFragment extends BaseFragment<WebViewAffiliateFragmentViewModel> {
-    FragmentWebviewAffiliateBinding bd;
+public class AddShipmentFragment extends BaseFragment<AddShipmentFragmentViewModel> {
+
+    FragmentAddShipmentBinding bd;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        bd = FragmentWebviewAffiliateBinding.inflate(getLayoutInflater());
+        bd = FragmentAddShipmentBinding.inflate(getLayoutInflater());
         return bd.getRoot();
     }
 

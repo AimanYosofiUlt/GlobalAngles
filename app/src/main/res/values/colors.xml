@@ -9,4 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="PrimaryColor">#BF214B</color>
     <color name="back_main_color">#EBEBEB</color>
+    <color name="external_btn_color">#27233B</color>
 </resources>
