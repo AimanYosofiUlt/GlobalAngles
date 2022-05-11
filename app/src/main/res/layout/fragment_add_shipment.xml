@@ -456,7 +456,7 @@
                 <ImageView
                     android:layout_width="20dp"
                     android:layout_height="20dp"
-                    android:src="@drawable/ic_canFit"
+                    android:src="@drawable/ic_can_fit"
                     android:layout_marginRight="5dp"/>
                 <TextView
                     android:layout_width="wrap_content"

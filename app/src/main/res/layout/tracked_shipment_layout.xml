@@ -30,7 +30,7 @@
 
     <View
         android:id="@+id/view"
-        android:layout_width="50dp"
+        android:layout_width="35dp"
         android:layout_height="2dp"
         android:background="@color/PrimaryColor"
         app:layout_constraintTop_toTopOf="parent"

@@ -3,39 +3,46 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/back_edittext.xml" value="0.137" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/back_edt.xml" value="0.137" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/back_gridview_affiliate.xml" value="0.137" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/back_layout_radius.xml" value="0.137" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/back_rel_spinner.xml" value="0.137" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/back_search_edittext.xml" value="0.2335" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/circle_white_background.xml" value="0.137" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/click_apple_button.xml" value="0.14" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/click_button.xml" value="0.137" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/click_facebook_button.xml" value="0.14" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/rel_back_destination.xml" value="0.137" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/activity_main.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/add_shipment_summary_layout.xml" value="0.2" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/bottom_sheet_user_type.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_add_shipment.xml" value="0.2" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_affiliate.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_login.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_main_angle.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_main_shipper.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_main_shipper_body.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_main_shipper_header.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_register.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_splashscreen.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_webview_affiliate.xml" value="0.176" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/main_affiliate_layout.xml" value="0.264" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/main_title_bar.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/single_item_shipment_summary.xml" value="0.47368421052631576" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/tracked_shipment_layout.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/view_affiliate.xml" value="0.4" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/view_pre_order.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/view_pre_order_bottom.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/view_product.xml" value="0.17300724637681159" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/view_trip.xml" value="0.17300724637681159" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/back_edittext.xml" value="0.19" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/click_button.xml" value="0.19" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/activity_main.xml" value="0.21614583333333334" />
-        <entry key="app/src/main/res/drawable/back_bottom_sheet.xml" value="0.215" />
-        <entry key="app/src/main/res/drawable/back_edittext.xml" value="0.344" />
-        <entry key="app/src/main/res/drawable/back_pre_order_bottom.xml" value="0.318" />
-        <entry key="app/src/main/res/drawable/back_search_edittext.xml" value="0.318" />
-        <entry key="app/src/main/res/drawable/click_apple_button.xml" value="0.344" />
-        <entry key="app/src/main/res/drawable/click_button.xml" value="0.3805" />
-        <entry key="app/src/main/res/drawable/click_facebook_button.xml" value="0.344" />
-        <entry key="app/src/main/res/layout-v23/fragment_main_shipper_header.xml" value="0.3802083333333333" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/layout/bottom_sheet_user_type.xml" value="0.3802083333333333" />
-        <entry key="app/src/main/res/layout/fragment.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/layout/fragment_main_angle.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/layout/fragment_main_shipper.xml" value="0.30611372381359553" />
-        <entry key="app/src/main/res/layout/fragment_main_shipper_body.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/layout/fragment_main_shipper_header.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/fragment_main_shipper_top.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.30611372381359553" />
-        <entry key="app/src/main/res/layout/fragment_splashscreen.xml" value="0.26506024096385544" />
-        <entry key="app/src/main/res/layout/view_affiliate.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/layout/view_pre_order.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/layout/view_pre_order_bottom.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/layout/view_product.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/layout/view_trip.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/menu/bottom_nav_main_angle.xml" value="0.31209918768704575" />
-        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.31209918768704575" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Embedded JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
