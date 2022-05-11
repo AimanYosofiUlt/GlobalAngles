@@ -1,9 +1,7 @@
 package com.ultimate.globalangles.ui.activity.main;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-
 import com.ultimate.globalangles.R;
 
 public class MainActivity extends AppCompatActivity {
