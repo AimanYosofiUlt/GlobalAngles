@@ -1,10 +1,6 @@
 package com.ultimate.globalangles.repository.server.responses.base;
 
-import android.util.Log;
-
 import androidx.annotation.NonNull;
-
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -17,29 +13,30 @@ public abstract class ResponsesCallBack<T extends ResponseObject> implements Cal
 
     @Override
     public final void onResponse(@NonNull Call<T> call, @NonNull Response<T> response) {
-//        if (response.isSuccessful()) {
-//            ResponseObject responseObject = response.body();
-//            if (responseObject == null) {
-//                onFailure("0", "null response from the api");
-//            } else {
-//                if (responseObject.getErrors() != null) {
-//                    if (responseObject.getErrors().size() == 0) {
-//                        onSuccess(response.body());
-//                    } else {
+        if (response.isSuccessful()) {
+            ResponseObject responseObject = response.body();
+            if (responseObject == null) {
+                onFailure("0", "null response from the api");
+            } else {
+                if (responseObject.getErrors() != null) {
+                    if (responseObject.getErrors().size() == 0) {
+                        onSuccess(response.body());
+                    } else {
 //                        List<String> errors = responseObject.getErrors();
-//                        String strList
+//                        String strList = "";
 //                        for (String error : errors) {
 //                            Log.d("ResponsesCallBack", "onResponse: " + error);
 //                        }
-//                        onFailure("0", errors);
-//                    }
-//                } else {
-//                    onFailure("0", "null response from the api");
-//                }
-//            }
-//        } else {
-//            onFailure("0", response.message());
-//        }
+                        //todo handle the errors here
+                        onFailure("0", "error not handled yet");
+                    }
+                } else {
+                    onFailure("0", "null response from the api");
+                }
+            }
+        } else {
+            onFailure("0", response.message());
+        }
     }
 
     @Override

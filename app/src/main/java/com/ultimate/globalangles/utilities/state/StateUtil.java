@@ -1,8 +1,7 @@
 package com.ultimate.globalangles.utilities.state;
 
 import android.content.Context;
-
-import com.ultimate.ecommerce.utilities.NetworkUtil;
+import com.ultimate.globalangles.utilities.NetworkUtil;
 
 public class StateUtil {
     public static Check validate(OnValidateListener listener) {

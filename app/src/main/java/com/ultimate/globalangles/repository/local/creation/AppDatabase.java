@@ -6,8 +6,10 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.ultimate.globalangles.repository.local.tables.setting.Setting;
+
 @Database(version = 1,
-        entities = {},
+        entities = {Setting.class},
         exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 

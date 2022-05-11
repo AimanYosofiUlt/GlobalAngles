@@ -23,6 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
         app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -40,41 +41,41 @@
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/email"
         style="@style/edit_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="12dp"
         android:ems="10"
+        android:inputType="textEmailAddress"
         android:hint="@string/email"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/password"
         style="@style/edit_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         android:ems="10"
+        android:inputType="textPassword"
         android:hint="@string/password"
-        android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/button2"
+        android:id="@+id/loginBtn"
         style="@style/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -105,13 +106,14 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginEnd="8dp"
-            android:src="@drawable/ic_android_icon"
+            android:src="@drawable/ic_facebook"
             app:layout_constraintBottom_toBottomOf="@+id/textView5"
             app:layout_constraintEnd_toStartOf="@+id/textView5"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView5" />
+            app:layout_constraintTop_toTopOf="@+id/textView5"
+            app:tint="@color/white" />
 
         <TextView
             android:id="@+id/textView5"
@@ -149,20 +151,21 @@
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_marginEnd="8dp"
-            android:src="@drawable/ic_android_icon"
+            android:src="@drawable/ic_apple_logo"
             app:layout_constraintBottom_toBottomOf="@+id/textView99"
             app:layout_constraintEnd_toStartOf="@+id/textView99"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/textView99" />
+            app:layout_constraintTop_toTopOf="@+id/textView99"
+            app:tint="@color/white" />
 
         <TextView
             android:id="@+id/textView99"
             style="@style/button_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/login_with_facebook"
+            android:text="@string/login_with_apple"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
