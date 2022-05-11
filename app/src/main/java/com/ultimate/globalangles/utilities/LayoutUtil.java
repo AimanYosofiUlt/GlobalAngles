@@ -1,14 +1,10 @@
 package com.ultimate.globalangles.utilities;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
 
 import androidx.constraintlayout.widget.ConstraintLayout;
 
 import com.facebook.shimmer.ShimmerFrameLayout;
-
 
 public class LayoutUtil {
     public static void showShimmer(ConstraintLayout constraintLayout, ShimmerFrameLayout shimmerFrameLayout) {
@@ -16,17 +12,13 @@ public class LayoutUtil {
         constraintLayout.setAlpha(0);
         shimmerFrameLayout.startShimmer();
     }
-
+    
     public static void hideShimmer(ConstraintLayout constraintLayout, ShimmerFrameLayout shimmerFrameLayout) {
-        shimmerFrameLayout.animate().setDuration(200).alpha(0).withEndAction(new Runnable() {
-            @Override
-            public void run() {
-                shimmerFrameLayout.stopShimmer();
-                shimmerFrameLayout.setVisibility(View.GONE);
-                constraintLayout.setVisibility(View.VISIBLE);
-                constraintLayout.animate().setDuration(1000).alpha(1);
-            }
+        shimmerFrameLayout.animate().setDuration(200).alpha(0).withEndAction(() -> {
+            shimmerFrameLayout.stopShimmer();
+            shimmerFrameLayout.setVisibility(View.GONE);
+            constraintLayout.setVisibility(View.VISIBLE);
+            constraintLayout.animate().setDuration(1000).alpha(1);
         });
     }
-
 }

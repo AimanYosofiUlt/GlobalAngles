@@ -28,7 +28,14 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
 
     @Override
     public void initEvent() {
-
+        bd.loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String email = bd.email.getText().toString();
+                String password = bd.password.getText().toString();
+                viewModel.validateLogin(requireContext(),email,password);
+            }
+        });
     }
 
     @Override
@@ -38,6 +45,7 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
 
     @Override
     public void initLoading() {
+
     }
 
     @Override

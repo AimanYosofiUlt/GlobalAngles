@@ -1,11 +1,15 @@
 package com.ultimate.globalangles.ui.fragment.splashscreen;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.fragment.NavHostFragment;
+
+import com.ultimate.globalangles.R;
 import com.ultimate.globalangles.databinding.FragmentSplashscreenBinding;
 import com.ultimate.globalangles.ui.base.BaseFragment;
 
@@ -37,6 +41,17 @@ public class SplashScreenFragment extends BaseFragment<SplashScreenFragmentViewM
 
     @Override
     public void initLoading() {
+        new CountDownTimer(100, 100) {
+            @Override
+            public void onFinish() {
+                NavHostFragment.findNavController(requireParentFragment())
+                        .navigate(R.id.actionSplashScreenToLogin);
+            }
+
+            @Override
+            public void onTick(long l) {
+            }
+        }.start();
     }
 
     @Override
