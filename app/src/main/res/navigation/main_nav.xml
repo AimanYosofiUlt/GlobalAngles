@@ -1,6 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/main_nav">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/splashScreenFragment">
 
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.splashscreen.SplashScreenFragment"
+        android:label="SplashScreenFragment"
+        tools:layout="@layout/fragment_splashscreen">
+        <action
+            android:id="@+id/actionSplashScreenToLogin"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/actionSplashScreenToMainAngle"
+            app:destination="@id/mainAngleFragment" />
+        <action
+            android:id="@+id/actionSplashScreenToMainShipper"
+            app:destination="@id/mainShipperFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginToMainAnglet"
+            app:destination="@id/mainAngleFragment" />
+        <action
+            android:id="@+id/action_loginToMainShipper"
+            app:destination="@id/mainShipperFragment" />
+        <action
+            android:id="@+id/actionLoginToRegister"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainAngleFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.main_angle.MainAngleFragment"
+        android:label="MainAngleFragment"
+        tools:layout="@layout/fragment_main_angle" />
+    <fragment
+        android:id="@+id/mainShipperFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.main_shipper.MainShipperFragment"
+        android:label="MainShipperFragment"
+        tools:layout="@layout/fragment_main_shipper" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.register.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/actionRegisterToMainAngle"
+            app:destination="@id/mainAngleFragment" />
+        <action
+            android:id="@+id/actionRegisterToMainShipper"
+            app:destination="@id/mainShipperFragment" />
+    </fragment>
 </navigation>

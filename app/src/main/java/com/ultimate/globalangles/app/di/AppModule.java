@@ -42,7 +42,7 @@ public abstract class AppModule {
     @UltimateApiBaseLink
     @Provides
     public static String provideBaseUrl() {
-        return "";
+        return "https://global-angels-backend.ultimate-portal.com/mobile/api/";
     }
 
 
@@ -81,7 +81,6 @@ public abstract class AppModule {
     public static AppDatabase provideAppDatabase(Application application) {
         return AppDatabase.getInstance(application);
     }
-
 
     @ActivityScoped
     @Provides

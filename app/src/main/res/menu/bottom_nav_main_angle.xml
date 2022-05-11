@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/trips"
+        android:title="@string/my_trips"
+        android:icon="@drawable/ic_logo"/>
+
+    <item android:id="@+id/daels"
+        android:title="@string/deals"
+        android:icon="@drawable/ic_logo"/>
+
+    <item android:id="@+id/chats"
+        android:title="@string/chats"
+        android:icon="@drawable/ic_logo"/>
+
+    <item android:id="@+id/menu"
+        android:title="@string/menu"
+        android:icon="@drawable/ic_logo"/>
+</menu>
