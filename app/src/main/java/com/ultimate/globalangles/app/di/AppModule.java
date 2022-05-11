@@ -19,14 +19,13 @@ import dagger.Provides;
 import dagger.hilt.InstallIn;
 import dagger.hilt.android.components.ActivityComponent;
 import dagger.hilt.android.scopes.ActivityScoped;
-import dagger.hilt.components.SingletonComponent;
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 @Module
-@InstallIn(SingletonComponent.class)
+@InstallIn(ActivityComponent.class)
 public abstract class AppModule {
 
     @Qualifier
@@ -43,7 +42,7 @@ public abstract class AppModule {
     @UltimateApiBaseLink
     @Provides
     public static String provideBaseUrl() {
-        return "";
+        return "https://global-angels-backend.ultimate-portal.com/mobile/api/";
     }
 
 
@@ -82,7 +81,6 @@ public abstract class AppModule {
     public static AppDatabase provideAppDatabase(Application application) {
         return AppDatabase.getInstance(application);
     }
-
 
     @ActivityScoped
     @Provides
