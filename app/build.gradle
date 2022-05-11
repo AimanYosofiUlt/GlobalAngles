@@ -27,6 +27,10 @@ android {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
+
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
@@ -66,7 +70,7 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.13.1'
 
     implementation 'io.michaelrocks:libphonenumber-android:8.12.47'
-    implementation 'com.github.joielechong:CountryCodePicker:2.4.1'
+//    implementation 'com.github.joielechong:CountryCodePicker:2.4.1'
 
     implementation 'com.google.android.gms:play-services-auth:20.2.0'
 }

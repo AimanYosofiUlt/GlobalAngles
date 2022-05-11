@@ -42,7 +42,7 @@ public abstract class AppModule {
     @UltimateApiBaseLink
     @Provides
     public static String provideBaseUrl() {
-        return "https://samir.ultimate-demos.com/wp-json/app/v1/";
+        return "https://global-angels-backend.ultimate-portal.com/mobile/api/";
     }
 
 
