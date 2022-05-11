@@ -46,4 +46,8 @@
     <string name="pre_orders">Pre-orders</string>
     <string name="my_trips">My trips</string>
     <string name="deals">Deals</string>
+
+    <string name="english">en</string>
+    <string name="arabic">ar</string>
+    <string name="tv_change_lang_header">change language</string>
 </resources>

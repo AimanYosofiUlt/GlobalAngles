@@ -29,10 +29,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.ultimate.ecommerce.R;
-import com.ultimate.ecommerce.app.LocaleHelper;
-import com.ultimate.ecommerce.utilities.CommonMethods;
-import com.ultimate.ecommerce.utilities.SharedPreferenceHelper;
+import com.ultimate.globalangles.R;
+import com.ultimate.globalangles.utilities.CommonMethods;
+import com.ultimate.globalangles.utilities.SharedPreferenceHelper;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -66,7 +65,7 @@ public abstract class BaseActivity<ViewModel extends BaseViewModel> extends AppC
                 if (Environment.isExternalStorageManager()) {
                     proceed();
                 } else {
-                    Toast.makeText(this, this.getString(com.ultimate.ecommerce.R.string.allow_permission_for_storage_access), Toast.LENGTH_SHORT).show();
+                  //  Toast.makeText(this, this.getString(com.ultimate.ecommerce.R.string.allow_permission_for_storage_access), Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -178,10 +177,10 @@ public abstract class BaseActivity<ViewModel extends BaseViewModel> extends AppC
 
         switch (CommonMethods.getLanguageId(this)) {
             case "1": // ar
-                LanguagesList[0] = this.getString(R.string.english);
+                LanguagesList[0] = this.getString(com.ultimate.globalangles.R.string.english);
                 break;
             case "2": // en
-                LanguagesList[0] = this.getString(R.string.arabic);
+                LanguagesList[0] = this.getString(com.ultimate.globalangles.R.string.arabic);
 
         }
 
