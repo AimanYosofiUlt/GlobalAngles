@@ -51,4 +51,22 @@
     <string name="english">English</string>
     <string name="arabic" translatable="false">Arabic</string>
     <string name="tv_change_lang_header" />
+    
+    
+    <!-- AffiliateFragment -->\
+    <array name="countries">
+        <item>Albania</item>
+        <item>Belarus</item>
+        <item>Canada</item>
+        <item>Denmark</item>
+        <item>Egypt</item>
+    </array>
+
+    <array name="categories">
+        <item>Shopping</item>
+        <item>Shopping</item>
+        <item>Shopping</item>
+        <item>Shopping</item>
+        <item>Shopping</item>
+    </array>
 </resources>
