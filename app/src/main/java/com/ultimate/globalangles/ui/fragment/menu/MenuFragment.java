@@ -7,20 +7,20 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
-import com.ultimate.globalangles.databinding.FragmentMenuLayoutBinding;
+import com.ultimate.globalangles.databinding.FragmentMenuBinding;
 import com.ultimate.globalangles.ui.base.BaseFragment;
 
 import javax.annotation.Nullable;
 
 public class MenuFragment extends BaseFragment {
 
-    FragmentMenuLayoutBinding bd;
+    FragmentMenuBinding bd;
 
 
     @javax.annotation.Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @javax.annotation.Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        bd = FragmentMenuLayoutBinding.inflate(getLayoutInflater());
+        bd = FragmentMenuBinding.inflate(getLayoutInflater());
         return bd.getRoot();
     }
 
