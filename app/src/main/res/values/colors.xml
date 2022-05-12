@@ -10,4 +10,5 @@
     <color name="PrimaryColor">#BF214B</color>
     <color name="back_main_color">#EBEBEB</color>
     <color name="external_btn_color">#27233B</color>
+    <color name="switch_btn_color">#F4E6E9</color>
 </resources>

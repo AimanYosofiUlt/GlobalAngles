@@ -17,8 +17,8 @@
             android:id="@+id/actionSplashScreenToMainAngle"
             app:destination="@id/mainAngleFragment" />
         <action
-            android:id="@+id/actionSplashScreenToMainShipper"
-            app:destination="@id/mainShipperFragment" />
+            android:id="@+id/action_splashScreenFragment_to_homeMainFragment"
+            app:destination="@id/homeMainFragment" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -29,11 +29,11 @@
             android:id="@+id/action_loginToMainAnglet"
             app:destination="@id/mainAngleFragment" />
         <action
-            android:id="@+id/action_loginToMainShipper"
-            app:destination="@id/mainShipperFragment" />
-        <action
             android:id="@+id/actionLoginToRegister"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeMainFragment"
+            app:destination="@id/homeMainFragment" />
     </fragment>
     <fragment
         android:id="@+id/mainAngleFragment"
@@ -54,7 +54,17 @@
             android:id="@+id/actionRegisterToMainAngle"
             app:destination="@id/mainAngleFragment" />
         <action
-            android:id="@+id/actionRegisterToMainShipper"
-            app:destination="@id/mainShipperFragment" />
+            android:id="@+id/action_registerFragment_to_homeMainFragment"
+            app:destination="@id/homeMainFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.menu.MenuFragment"
+        android:label="MenuFragment"
+        tools:layout="@layout/fragment_menu_layout"/>
+    <fragment
+        android:id="@+id/homeMainFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.main.HomeMainFragment"
+        android:label="HomeMainFragment"
+        tools:layout="@layout/fragment_home_main_layout"/>
 </navigation>
