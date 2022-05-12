@@ -4,11 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/back_main_color"
+    android:paddingStart="16dp"
     android:paddingTop="16dp"
     android:paddingEnd="16dp"
-    android:paddingStart="16dp"
-    android:paddingBottom="24dp"
-    >
+    android:paddingBottom="24dp">
 
     <ImageView
         android:id="@+id/backBtn"

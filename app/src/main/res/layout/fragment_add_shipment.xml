@@ -490,7 +490,6 @@
                         <RadioButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:button="false"
                             android:checked="false"
                             android:background="@drawable/back_fit_in_radio"
                             />
@@ -530,7 +529,6 @@
                         <RadioButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:button="false"
                             android:checked="false"
                             android:background="@drawable/back_fit_in_radio"
                             />
@@ -568,7 +566,6 @@
                         <RadioButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:button="false"
                             android:checked="false"
                             android:background="@drawable/back_fit_in_radio"
                             />

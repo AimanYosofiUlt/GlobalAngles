@@ -1,105 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/back_layout_radius"
-    app:layout_behavior="@string/bottom_sheet_behavior">
-
-    <RelativeLayout
-        android:id="@+id/relv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="15dp"
-        android:padding="5dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:background="@drawable/back_layout_radius"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+        <RelativeLayout
+            android:id="@+id/relv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:padding="5dp"
+            android:layout_margin="15dp"
+            >
 
-        <View
-            android:id="@+id/view_v"
-            android:layout_width="50dp"
-            android:layout_height="2.2dp"
-            android:layout_centerInParent="true"
-            android:background="#717171" />
+            <View
+                android:id="@+id/view_v"
+                android:layout_width="50dp"
+                android:layout_height="2.2dp"
+                android:layout_centerInParent="true"
+                android:background="#717171" />
+
+            <ImageButton
+                android:id="@+id/close_btn"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:src="@drawable/ic_close" />
+        </RelativeLayout>
 
         <ImageButton
-            android:id="@+id/close_btn"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_alignParentEnd="true"
-            android:background="?android:attr/selectableItemBackground"
-            android:src="@drawable/ic_close" />
-    </RelativeLayout>
+            android:id="@+id/btn_add_new_item"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:src="@drawable/ic_addnewitemsvg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btn_pick_online"
+            app:layout_constraintTop_toBottomOf="@id/relv"
+            android:layout_marginTop="30dp"
+            />
 
-    <ImageButton
-        android:id="@+id/btn_add_new_item"
-        android:layout_width="92dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/ic_addnewitemsvg"
-        app:layout_constraintEnd_toStartOf="@+id/btn_pick_online"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/relv" />
+        <ImageButton
+            android:id="@+id/btn_pick_online"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:src="@drawable/ic_pickonlinesvg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/relv"
+            android:layout_marginTop="30dp"
+            />
 
-    <ImageButton
-        android:id="@+id/btn_pick_online"
-        android:layout_width="92dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/ic_pickonlinesvg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/relv" />
-
-    <ImageButton
-        android:id="@+id/btn_shop_affiliate"
-        android:layout_width="92dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="30dp"
-        android:src="@drawable/ic_shopaffiliatesvg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_pick_online"
-        app:layout_constraintTop_toBottomOf="@id/relv" />
+        <ImageButton
+            android:id="@+id/btn_shop_affiliate"
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:src="@drawable/ic_shopaffiliatesvg"
+            app:layout_constraintStart_toEndOf="@+id/btn_pick_online"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/relv"
+            android:layout_marginTop="30dp"
+            />
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:src="@drawable/ic_addnewitem"
-        android:text="Add new \nitem"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/txt_pick_online"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_add_new_item" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_addnewitem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txt_pick_online"
+            app:layout_constraintTop_toBottomOf="@id/btn_add_new_item"
+            android:layout_marginTop="15dp"
+            android:text="Add new \nitem"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
 
-    <TextView
-        android:id="@+id/txt_pick_online"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
-        android:gravity="center"
-        android:src="@drawable/ic_pickonline"
-        android:text="Shop from \nAffiliate store"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_pick_online" />
+        <TextView
+            android:id="@+id/txt_pick_online"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_pickonline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_pick_online"
+            android:layout_marginTop="15dp"
+            android:text="Shop from \nAffiliate store"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginBottom="15dp"
+            />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:src="@drawable/ic_shopaffiliate"
-        android:text="Pick from \nGA Store"
-        android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_pick_online"
-        app:layout_constraintTop_toBottomOf="@id/btn_shop_affiliate" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_shopaffiliate"
+            app:layout_constraintStart_toEndOf="@+id/txt_pick_online"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_shop_affiliate"
+            android:layout_marginTop="15dp"
+            android:text="Pick from \nGA Store"
+            android:textColor="@color/black"
+            android:gravity="center"
+            />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 

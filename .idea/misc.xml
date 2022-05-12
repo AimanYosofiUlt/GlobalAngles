@@ -6,6 +6,7 @@
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/back_circle.xml" value="0.1815" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/back_edittext.xml" value="0.19" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/back_edittext2.xml" value="0.1815" />
+        <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/back_fit_in_radio.xml" value="0.103" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/back_pre_order_bottom.xml" value="0.1815" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/back_prfercode_edit_text.xml" value="0.1815" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/back_search_edittext.xml" value="0.223" />
@@ -14,10 +15,13 @@
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/click_gray_round8.xml" value="0.1815" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/fragment_edit_address.xml" value="0.1815" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/fragment_setting.xml" value="0.1815" />
+        <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/ic_shop.xml" value="0.1675" />
+        <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/upload_item_border.xml" value="0.103" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/activity_main.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/add_shipment_summary_layout.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/bottom_sheet_user_type.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/fragment_add_new_item_bottom_sheet.xml" value="0.1" />
+        <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/fragment_add_new_item_to_shipment.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/fragment_add_shipment.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/fragment_add_shipment_summary.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/fragment_address.xml" value="0.21614583333333334" />
@@ -50,6 +54,8 @@
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/view_notification.xml" value="0.25" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/view_payout_history.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/view_product.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/menu/bottom_nav_main_angle.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/menu/bottom_nav_main_shipper.xml" value="0.21614583333333334" />
         <entry key="app/src/main/res/drawable/back_bottom_sheet.xml" value="0.215" />
         <entry key="app/src/main/res/drawable/back_edittext.xml" value="0.344" />
         <entry key="app/src/main/res/drawable/back_pre_order_bottom.xml" value="0.318" />

@@ -50,7 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_notifications"
-            app:tint="@color/PrimaryColor" />
+            app:tint="@color/primary_color" />
 
         <ImageView
             android:id="@+id/show_notif_btn"
@@ -64,7 +64,7 @@
             app:layout_constraintEnd_toStartOf="@+id/imageView10"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_fav"
-            app:tint="@color/PrimaryColor" />
+            app:tint="@color/primary_color" />
 
         <include
             android:id="@+id/inc_layout"
@@ -79,33 +79,33 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:background="@drawable/back_layout_radius"
+            android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp"
-            android:gravity="center"
             app:layout_constraintTop_toBottomOf="@+id/inc_layout">
 
             <LinearLayout
                 android:layout_width="240dp"
                 android:layout_height="240dp"
-                android:orientation="vertical"
                 android:background="@drawable/upload_item_border"
                 android:gravity="center"
-                >
+                android:orientation="vertical">
+
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/ic_upload"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="15dp"/>
+                    android:layout_marginBottom="15dp"
+                    android:src="@drawable/ic_upload" />
+
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Upload Item Photo"
-                    android:textSize="18sp"
-                    android:textColor="@color/gray_color"
-                    android:textStyle="normal"
                     android:layout_gravity="center_horizontal"
-                    />
+                    android:text="Upload Item Photo"
+                    android:textColor="@color/gray_color"
+                    android:textSize="18sp"
+                    android:textStyle="normal" />
 
             </LinearLayout>
 
@@ -130,8 +130,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -154,26 +154,28 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="5dp"
-                    android:padding="3dp"
-                    android:background="@drawable/back_rel_spinner">
+                    android:background="@drawable/back_rel_spinner"
+                    android:padding="3dp">
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
-                        android:background="@color/white"/>
+                        android:background="@color/white" />
 
                 </RelativeLayout>
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginTop="15dp">
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -196,8 +198,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="5dp"
-                    android:padding="3dp"
-                    android:background="@drawable/back_rel_spinner">
+                    android:background="@drawable/back_rel_spinner"
+                    android:padding="3dp">
 
                     <EditText
                         android:layout_width="match_parent"
@@ -210,15 +212,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:layout_marginTop="15dp"
-                >
+                android:orientation="vertical">
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -240,15 +241,14 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_marginTop="5dp"
-                    >
+                    android:layout_marginTop="5dp">
+
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
-                        android:padding="3dp"
-                        android:background="@drawable/back_rel_spinner"
                         android:layout_alignParentStart="true"
-                        >
+                        android:background="@drawable/back_rel_spinner"
+                        android:padding="3dp">
 
                         <EditText
                             android:layout_width="180dp"
@@ -261,13 +261,13 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:orientation="horizontal"
-                        android:weightSum="3"
                         android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
                         android:layout_marginLeft="30dp"
                         android:layout_marginRight="30dp"
-                        >
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
                         <ImageButton
                             android:layout_width="28dp"
                             android:layout_height="28dp"
@@ -285,7 +285,7 @@
                             android:layout_marginRight="10dp"
                             android:gravity="center"
                             android:text="1"
-                            android:textColor="@color/PrimaryColor"
+                            android:textColor="@color/primary_color"
                             android:textSize="24sp"
                             android:textStyle="bold" />
 
@@ -300,7 +300,7 @@
 
                 </RelativeLayout>
 
-        </LinearLayout>
+            </LinearLayout>
 
 
         </LinearLayout>
@@ -423,8 +423,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -469,8 +469,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
 
                     <ImageView
                         android:layout_width="20dp"
@@ -602,41 +602,42 @@
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="5dp">
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
                     <RelativeLayout
                         android:layout_width="120dp"
                         android:layout_height="40dp">
+
                         <RadioButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:button="false"
-                            android:checked="false"
                             android:background="@drawable/back_fit_in_radio"
-                            />
+                            android:checked="false" />
+
                         <LinearLayout
                             android:layout_width="120dp"
                             android:layout_height="40dp"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:background="@drawable/back_rel_spinner"
-                            android:padding="10dp"
                             android:layout_centerVertical="true"
-                            >
+                            android:background="@drawable/back_rel_spinner"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
                             <ImageView
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
-                                android:src="@drawable/ic_backpack"
-                                app:tint="@color/external_btn_color"
+                                android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
-                                android:layout_marginLeft="5dp"/>
+                                android:src="@drawable/ic_backpack"
+                                app:tint="@color/external_btn_color" />
+
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Backpack"
-                                android:textSize="14sp"
                                 android:textColor="@color/external_btn_color"
-                                />
+                                android:textSize="14sp" />
                         </LinearLayout>
 
                     </RelativeLayout>
@@ -645,15 +646,14 @@
                     <RelativeLayout
                         android:layout_width="120dp"
                         android:layout_height="40dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginLeft="10dp">
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
                         <RadioButton
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:button="false"
-                            android:checked="false"
                             android:background="@drawable/back_fit_in_radio"
-                            />
+                            android:checked="false" />
 
                         <LinearLayout
                             android:layout_width="120dp"
@@ -683,43 +683,41 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                    android:layout_width="120dp"
-                    android:layout_height="40dp">
-                    <RadioButton
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:button="false"
-                        android:checked="false"
-                        android:background="@drawable/back_fit_in_radio"
-                        />
-
-                    <LinearLayout
                         android:layout_width="120dp"
-                        android:layout_height="40dp"
-                        android:layout_centerVertical="true"
-                        android:background="@drawable/back_rel_spinner"
-                        android:gravity="center_vertical"
-                        android:orientation="horizontal"
-                        android:padding="10dp">
+                        android:layout_height="40dp">
 
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
-                            android:src="@drawable/ic_check_in"
-                            app:tint="@color/external_btn_color" />
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/back_fit_in_radio"
+                            android:checked="false" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Check In"
-                            android:textColor="@color/external_btn_color"
-                            android:textSize="14sp"
-                            />
-                    </LinearLayout>
+                        <LinearLayout
+                            android:layout_width="120dp"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/back_rel_spinner"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
 
-                </RelativeLayout>
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginRight="5dp"
+                                android:src="@drawable/ic_check_in"
+                                app:tint="@color/external_btn_color" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Check In"
+                                android:textColor="@color/external_btn_color"
+                                android:textSize="14sp" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
                 </RadioGroup>
             </LinearLayout>
 
@@ -756,9 +754,9 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/back_rel_spinner"
-                    android:padding="8dp"
-                    android:layout_marginTop="5dp">
+                    android:padding="8dp">
 
                     <TextView
                         android:layout_width="wrap_content"
