@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/shop"
+    <item android:id="@+id/mainShipperFragment"
         android:title="@string/shop"
-        android:icon="@drawable/ic_logo"/>
+        android:icon="@drawable/ic_shop"/>
 
     <item android:id="@+id/shipments"
         android:title="@string/shipments"
@@ -10,9 +10,9 @@
 
     <item android:id="@+id/chats"
         android:title="@string/chats"
-        android:icon="@drawable/ic_logo"/>
+        android:icon="@drawable/ic_chat"/>
 
-    <item android:id="@+id/menu"
+    <item android:id="@+id/menuFragment"
         android:title="@string/menu"
-        android:icon="@drawable/ic_logo"/>
+        android:icon="@drawable/ic_menu"/>
 </menu>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp">
+
+    <ImageView
+        android:id="@+id/track_shape1"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:src="@drawable/ic_android_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/PrimaryColor"
+        />
+
+    <TextView
+        android:id="@+id/txt_shipment1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shipment details"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/PrimaryColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/track_shape1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="35dp"
+        android:layout_height="2dp"
+        android:background="@color/PrimaryColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/txt_shipment1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="10dp"/>
+
+
+    <ImageView
+        android:id="@+id/track_shape2"
+        android:layout_width="19dp"
+        android:layout_height="19dp"
+        android:src="@drawable/ic_android_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/PrimaryColor"
+        app:layout_constraintStart_toEndOf="@id/view"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shipment summary"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/PrimaryColor"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/track_shape2"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
