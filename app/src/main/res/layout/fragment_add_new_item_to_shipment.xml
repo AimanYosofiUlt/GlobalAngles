@@ -47,9 +47,9 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
+            android:src="@drawable/ic_notifications"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_notifications"
             app:tint="@color/primary_color" />
 
         <ImageView
@@ -586,7 +586,7 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/ic_can_fit" />
+                        android:src="@drawable/ic_canfit" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -611,35 +611,15 @@
 
                         <RadioButton
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:background="@drawable/back_fit_in_radio"
-                            android:checked="false" />
-
-                        <LinearLayout
-                            android:layout_width="120dp"
-                            android:layout_height="40dp"
-                            android:layout_centerVertical="true"
-                            android:background="@drawable/back_rel_spinner"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                android:src="@drawable/ic_backpack"
-                                app:tint="@color/external_btn_color" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Backpack"
-                                android:textColor="@color/external_btn_color"
-                                android:textSize="14sp" />
-                        </LinearLayout>
-
+                            android:button="@drawable/click_gray_round8"
+                            android:checked="true"
+                            android:drawableStart="@drawable/ic_backpack"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:text="@string/backpack"
+                            android:textColor="@color/white" />
                     </RelativeLayout>
 
 
@@ -651,34 +631,15 @@
 
                         <RadioButton
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/back_fit_in_radio"
-                            android:checked="false" />
-
-                        <LinearLayout
-                            android:layout_width="120dp"
-                            android:layout_height="40dp"
-                            android:layout_centerVertical="true"
-                            android:background="@drawable/back_rel_spinner"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                android:src="@drawable/ic_carry_on"
-                                app:tint="@color/external_btn_color" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Carry On"
-                                android:textColor="@color/external_btn_color"
-                                android:textSize="14sp" />
-                        </LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/check_gray_round8"
+                            android:button="@drawable/click_gray_round8"
+                            android:checked="false"
+                            android:drawableStart="@drawable/ic_carryon"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:text="@string/carty_on"
+                            android:textColor="@color/black" />
 
                     </RelativeLayout>
 
@@ -686,36 +647,17 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp">
 
-                        <RadioButton
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:background="@drawable/back_fit_in_radio"
-                            android:checked="false" />
-
-                        <LinearLayout
-                            android:layout_width="120dp"
-                            android:layout_height="40dp"
-                            android:layout_centerVertical="true"
-                            android:background="@drawable/back_rel_spinner"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                android:src="@drawable/ic_check_in"
-                                app:tint="@color/external_btn_color" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
+                            <RadioButton
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:text="Check In"
-                                android:textColor="@color/external_btn_color"
-                                android:textSize="14sp" />
-                        </LinearLayout>
+                                android:background="@drawable/check_gray_round8"
+                                android:button="@drawable/click_gray_round8"
+                                android:checked="false"
+                                android:drawableStart="@drawable/ic_checkin"
+                                android:drawablePadding="10dp"
+                                android:padding="10dp"
+                                android:text="@string/check_in"
+                                android:textColor="@color/black" />
 
                     </RelativeLayout>
                 </RadioGroup>
