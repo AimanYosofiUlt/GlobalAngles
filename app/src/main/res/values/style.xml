@@ -10,6 +10,15 @@
         <item name="android:paddingBottom">12dp</item>
     </style>
 
+    <style name="edit_text2">
+        <item name="android:background">@drawable/back_edittext2</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:paddingStart">12dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+    </style>
+
     <style name="search_edit_text">
         <item name="android:background">@drawable/back_search_edittext</item>
         <item name="android:textSize">14sp</item>
