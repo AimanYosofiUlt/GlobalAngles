@@ -33,7 +33,7 @@
     </style>
 
     <style name="link_text_view">
-        <item name="android:textColor">@color/PrimaryColor</item>
+        <item name="android:textColor">@color/primary_color</item>
     </style>
 
     <style name="button">

@@ -14,7 +14,7 @@
         android:layout_marginTop="15dp"
         android:layout_marginBottom="10dp"
         android:src="@drawable/ic_profile"
-        app:tint="@color/PrimaryColor"
+        app:tint="@color/primary_color"
         />
 
     <TextView
@@ -43,7 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="View Profile"
-            android:textColor="@color/PrimaryColor"
+            android:textColor="@color/primary_color"
             android:textSize="14sp"
             android:textStyle="normal"
             />
@@ -51,7 +51,7 @@
             android:layout_width="25dp"
             android:layout_height="25dp"
             android:src="@drawable/ic_path"
-            app:tint="@color/PrimaryColor"
+            app:tint="@color/primary_color"
             />
     </LinearLayout>
 
@@ -79,7 +79,7 @@
             android:layout_height="wrap_content"
             android:text="Switch to shopper profile"
             android:textSize="18sp"
-            android:textColor="@color/PrimaryColor"
+            android:textColor="@color/primary_color"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
             android:textStyle="bold"/>
