@@ -59,11 +59,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="@drawable/back_gridview_affiliate"
         android:padding="10dp">
+
         <WebView
             android:id="@+id/web_affiliate_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            />
+            android:layout_height="match_parent" />
     </RelativeLayout>
 
 

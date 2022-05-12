@@ -61,7 +61,7 @@
         android:id="@+id/menuFragment"
         android:name="com.ultimate.globalangles.ui.fragment.menu.MenuFragment"
         android:label="MenuFragment"
-        tools:layout="@layout/fragment_menu_layout"/>
+        tools:layout="@layout/fragment_menu"/>
     <fragment
         android:id="@+id/homeMainFragment"
         android:name="com.ultimate.globalangles.ui.fragment.main.HomeMainFragment"

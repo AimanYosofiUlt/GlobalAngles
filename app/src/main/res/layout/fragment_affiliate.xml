@@ -7,7 +7,7 @@
     android:background="#EBEBEB">
 
     <include
-        layout="@layout/main_affiliate_layout"/>
+        layout="@layout/fragment_affiliate_header"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
