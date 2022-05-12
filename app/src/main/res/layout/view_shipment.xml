@@ -68,7 +68,7 @@
                     android:layout_width="20dp"
                     android:layout_height="20dp"
                     android:src="@drawable/ic_backpack"
-                    app:tint="@color/PrimaryColor"
+                    app:tint="@color/primary_color"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="5dp"
                     />
@@ -119,7 +119,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="1"
-                android:textColor="@color/PrimaryColor"
+                android:textColor="@color/primary_color"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 />
@@ -144,7 +144,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$870"
-                android:textColor="@color/PrimaryColor"
+                android:textColor="@color/primary_color"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 />
@@ -169,7 +169,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="$108"
-                android:textColor="@color/PrimaryColor"
+                android:textColor="@color/primary_color"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 />

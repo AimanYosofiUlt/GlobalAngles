@@ -38,7 +38,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_notifications"
-        app:tint="@color/PrimaryColor"
+        app:tint="@color/primary_color"
         android:layout_marginBottom="10dp"/>
 
     <ImageView
@@ -49,7 +49,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView10"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_fav"
-        app:tint="@color/PrimaryColor"
+        app:tint="@color/primary_color"
         android:layout_marginBottom="10dp"/>
 
 
@@ -91,7 +91,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_country"
-                app:tint="@color/PrimaryColor"
+                app:tint="@color/primary_color"
                 android:layout_gravity="center_vertical"/>
 
             <TextView
@@ -125,7 +125,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_category"
-                app:tint="@color/PrimaryColor"
+                app:tint="@color/primary_color"
                 android:layout_gravity="center_vertical"/>
 
             <TextView

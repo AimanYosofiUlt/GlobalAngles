@@ -50,7 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_notifications"
-            app:tint="@color/PrimaryColor" />
+            app:tint="@color/primary_color" />
 
         <ImageView
             android:id="@+id/show_notif_btn"
@@ -64,7 +64,7 @@
             app:layout_constraintEnd_toStartOf="@+id/imageView10"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_fav"
-            app:tint="@color/PrimaryColor" />
+            app:tint="@color/primary_color" />
 
         <include
             android:id="@+id/inc_layout"
@@ -268,7 +268,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:text="+ Add new address"
-                    android:textColor="@color/PrimaryColor"
+                    android:textColor="@color/primary_color"
                     android:textSize="17sp"
                     android:textStyle="normal" />
             </RelativeLayout>
@@ -471,7 +471,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:text="$780"
-                    android:textColor="@color/PrimaryColor"
+                    android:textColor="@color/primary_color"
                     android:textSize="15sp"
                     android:textStyle="bold" />
 
@@ -505,7 +505,7 @@
                 android:background="@drawable/back_add_new_items_btn"
                 android:text="+Add new items"
                 android:textAllCaps="false"
-                android:textColor="@color/PrimaryColor"
+                android:textColor="@color/primary_color"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 

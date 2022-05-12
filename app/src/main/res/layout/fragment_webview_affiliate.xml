@@ -43,7 +43,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_notifications"
-        app:tint="@color/PrimaryColor"
+        app:tint="@color/primary_color"
         android:layout_marginTop="15dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"

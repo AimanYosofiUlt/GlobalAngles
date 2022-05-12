@@ -31,7 +31,6 @@
     <string name="hello">Hello!</string>
     <string name="create_a_new_account">Create a new account</string>
     <string name="simple">Simple</string>
-    <string name="simple_number">100</string>
     <string name="from">From</string>
     <string name="to">To</string>
     <string name="shop">Shop</string>
@@ -51,8 +50,34 @@
     <string name="english">English</string>
     <string name="arabic" translatable="false">Arabic</string>
     <string name="tv_change_lang_header" />
-    
-    
+    <string name="sample_small">Smaple</string>
+    <string name="sample_miduem">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</string>
+    <string name="sample_larg">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad</string>
+    <string name="sample_number">100</string>
+    <string name="sample_money">100$</string>
+
+    <string name="code">CODE</string>
+    <string name="delivery_address">Delivery Address</string>
+    <string name="address_nickname">Address Nickname</string>
+    <string name="area">Area</string>
+    <string name="street">Street</string>
+    <string name="bilding">Bilding</string>
+    <string name="floor">Floor</string>
+    <string name="apartment_no">Apartment NO</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="save">Save</string>
+    <string name="add_new_address">+ Add new address</string>
+    <string name="how_to_ay_do_anything">How to ay do anything?</string>
+    <string name="message">Message</string>
+    <string name="name">Name</string>
+    <string name="send">Send</string>
+    <string name="current_balance">Current balance</string>
+    <string name="payout">Payout</string>
+    <string name="payout_history">Payout History</string>
+    <string name="pending">Pending</string>
+    <string name="completed">Completed</string>
+    <string name="change_language">Change Language</string>
+
     <!-- AffiliateFragment -->\
     <array name="countries">
         <item>Albania</item>

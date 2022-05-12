@@ -14,7 +14,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_country"
-        app:tint="@color/PrimaryColor" />
+        app:tint="@color/primary_color" />
 
     <ImageView
         android:id="@+id/imageView10"
@@ -23,7 +23,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_notifications"
-        app:tint="@color/PrimaryColor" />
+        app:tint="@color/primary_color" />
 
     <ImageView
         android:id="@+id/imageView11"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toStartOf="@+id/imageView10"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_fav"
-        app:tint="@color/PrimaryColor" />
+        app:tint="@color/primary_color" />
 
     <TextView
         android:id="@+id/textView14"

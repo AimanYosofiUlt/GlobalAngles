@@ -50,7 +50,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_notifications"
-            app:tint="@color/PrimaryColor" />
+            app:tint="@color/primary_color" />
 
         <ImageView
             android:id="@+id/show_notif_btn"
@@ -64,7 +64,7 @@
             app:layout_constraintEnd_toStartOf="@+id/imageView10"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_fav"
-            app:tint="@color/PrimaryColor" />
+            app:tint="@color/primary_color" />
 
         <include
             android:id="@+id/inc_layout"
@@ -78,7 +78,7 @@
             android:id="@+id/lin_images"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:background="@drawable/back_layout_radius"
+                android:background="@drawable/back_layout_radius"
             android:orientation="vertical"
             android:padding="10dp"
             app:layout_constraintTop_toBottomOf="@+id/inc_layout"
@@ -122,7 +122,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
                 android:text="$200"
-                android:textColor="@color/PrimaryColor"
+                android:textColor="@color/primary_color"
                 android:textSize="20sp"
                 android:textStyle="bold" />
 
@@ -156,7 +156,7 @@
                         android:layout_marginRight="10dp"
                         android:gravity="center"
                         android:text="1"
-                        android:textColor="@color/PrimaryColor"
+                        android:textColor="@color/primary_color"
                         android:textSize="24sp"
                         android:textStyle="bold" />
 
