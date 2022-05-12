@@ -11,10 +11,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
 import com.google.android.material.navigation.NavigationBarView;
 import com.ultimate.globalangles.databinding.FragmentHomeMainLayoutBinding;
 import com.ultimate.globalangles.ui.base.BaseFragment;
 import com.ultimate.globalangles.R;
+import com.ultimate.globalangles.ui.fragment.bottomSheet.AddNewItemBottomSheetFragment;
 import com.ultimate.globalangles.ui.fragment.main_shipper.MainShipperFragment;
 import com.ultimate.globalangles.ui.fragment.menu.MenuFragment;
 
@@ -32,6 +36,17 @@ public class HomeMainFragment extends BaseFragment<HomeMainFragmentViewModel> im
         bd.bottomNavigationView.setOnNavigationItemSelectedListener(this::onNavigationItemSelected);
 
         return bd.getRoot();
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @androidx.annotation.Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        operateBottomNav();
+    }
+
+    private void operateBottomNav() {
+        bd.bottomNavigationView.setSelectedItemId(R.id.mainShipperFragment);
+        bd.bottomNavigationView.getMenu().findItem(R.id.mainShipperFragment).setChecked(true);
     }
 
 
@@ -63,9 +78,16 @@ public class HomeMainFragment extends BaseFragment<HomeMainFragmentViewModel> im
             replacementFragments(new MainShipperFragment());
         }else if (id == R.id.menuFragment){
             replacementFragments(new MenuFragment());
+        }else if (id == R.id.chats){
+            showBottomSheetDialog();
         }else  replacementFragments(new MainShipperFragment());
 
         return true;
+    }
+
+    private void showBottomSheetDialog() {
+         BottomSheetDialogFragment bottomSheetDialog = new AddNewItemBottomSheetFragment();
+         bottomSheetDialog.show(getChildFragmentManager(),bottomSheetDialog.getTag());
     }
 
     private void replacementFragments(Fragment fragment){
