@@ -11,7 +11,7 @@
         android:text="@string/global_angles_temp_logo"
         android:textAlignment="center"
         android:textAllCaps="true"
-        android:textColor="@color/PrimaryColor"
+        android:textColor="@color/primary_color"
         android:textSize="62sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"

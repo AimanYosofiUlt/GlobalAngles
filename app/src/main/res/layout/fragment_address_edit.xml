@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_main_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/tools_page_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/back_layout_radius"
+        android:paddingTop="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/imageView14"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_temp_map"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView27"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/delivery_address"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="@+id/imageView14"
+                app:layout_constraintTop_toBottomOf="@+id/imageView14" />
+
+            <EditText
+                android:id="@+id/addressNickNameED"
+                style="@style/edit_text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16sp"
+                android:hint="@string/address_nickname"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView27" />
+
+            <!--            TODO handle country code spinner-->
+
+            <EditText
+                android:id="@+id/phoneED"
+                style="@style/edit_text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/mobile_number"
+                android:inputType="phone"
+                app:layout_constraintEnd_toEndOf="@+id/apartmentNoED"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/apartmentNoED"
+                app:layout_constraintTop_toBottomOf="@+id/apartmentNoED" />
+
+            <EditText
+                android:id="@+id/areaED"
+                style="@style/edit_text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/area"
+                app:layout_constraintEnd_toEndOf="@+id/addressNickNameED"
+                app:layout_constraintStart_toStartOf="@+id/addressNickNameED"
+                app:layout_constraintTop_toBottomOf="@+id/addressNickNameED" />
+
+            <EditText
+                android:id="@+id/streetED"
+                style="@style/edit_text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="@string/street"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="@+id/areaED"
+                app:layout_constraintStart_toStartOf="@+id/areaED"
+                app:layout_constraintTop_toBottomOf="@+id/areaED"
+                tools:layout_editor_absoluteY="352dp" />
+
+            <EditText
+                android:id="@+id/buildingED"
+                style="@style/edit_text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/bilding"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="@+id/streetED"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/streetED"
+                app:layout_constraintTop_toBottomOf="@+id/streetED" />
+
+            <EditText
+                android:id="@+id/floorED"
+                style="@style/edit_text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:ems="10"
+                android:hint="@string/floor"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="@+id/buildingED"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/buildingED"
+                app:layout_constraintTop_toBottomOf="@+id/buildingED" />
+
+            <EditText
+                android:id="@+id/apartmentNoED"
+                style="@style/edit_text2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="@string/apartment_no"
+                android:inputType="text"
+                app:layout_constraintEnd_toEndOf="@+id/floorED"
+                app:layout_constraintStart_toStartOf="@+id/floorED"
+                app:layout_constraintTop_toBottomOf="@+id/floorED" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/editTextTextPersonName185"
+                style="@style/button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="46dp"
+                android:text="@string/save"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/phoneED"
+                app:layout_constraintStart_toStartOf="@+id/phoneED"
+                app:layout_constraintTop_toBottomOf="@+id/phoneED" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+</LinearLayout>

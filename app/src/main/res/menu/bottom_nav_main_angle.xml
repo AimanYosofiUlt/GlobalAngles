@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/trips"
         android:title="@string/my_trips"
-        android:icon="@drawable/ic_logo"/>
+        android:icon="@drawable/ic_trips"/>
 
     <item android:id="@+id/daels"
         android:title="@string/deals"
-        android:icon="@drawable/ic_logo"/>
+        android:icon="@drawable/ic_deals"/>
 
     <item android:id="@+id/chats"
         android:title="@string/chats"
-        android:icon="@drawable/ic_logo"/>
+        android:icon="@drawable/ic_chat"/>
 
     <item android:id="@+id/menu"
         android:title="@string/menu"
-        android:icon="@drawable/ic_logo"/>
+        android:icon="@drawable/ic_menu"/>
 </menu>
