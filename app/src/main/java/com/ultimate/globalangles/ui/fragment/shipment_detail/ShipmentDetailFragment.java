@@ -1,4 +1,4 @@
-package com.ultimate.globalangles.ui.fragment;
+package com.ultimate.globalangles.ui.fragment.shipment_detail;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 
-import com.ultimate.globalangles.databinding.FragmentHelpBinding;
+import com.ultimate.globalangles.databinding.FragmentShipmentDetailBinding;
 import com.ultimate.globalangles.ui.base.BaseFragment;
 
 import javax.annotation.Nullable;
@@ -15,13 +15,13 @@ import javax.annotation.Nullable;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class HelpFragment extends BaseFragment<HelpFragmentViewModel> {
-    FragmentHelpBinding bd;
+public class ShipmentDetailFragment extends BaseFragment<ShipmentDetailFragmentViewModel> {
+    FragmentShipmentDetailBinding bd;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        bd = FragmentHelpBinding.inflate(getLayoutInflater());
+        bd = FragmentShipmentDetailBinding.inflate(getLayoutInflater());
         return bd.getRoot();
     }
 
@@ -45,3 +45,5 @@ public class HelpFragment extends BaseFragment<HelpFragmentViewModel> {
 
     }
 }
+
+

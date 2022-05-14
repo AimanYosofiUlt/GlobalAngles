@@ -13,4 +13,8 @@
     <color name="switch_btn_color">#F4E6E9</color>
     <color name="text_gray">#6F6F6F</color>
     <color name="gray_color">#6F6F6F</color>
+    <color name="status_color">#9AC8E0</color>
+    <color name="green_color">#16A045</color>
+    <color name="orange_color">#FC6C21</color>
+    <color name="info_color">#F7F6FD</color>
 </resources>

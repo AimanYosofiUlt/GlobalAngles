@@ -1,4 +1,4 @@
-package com.ultimate.globalangles.ui.fragment;
+package com.ultimate.globalangles.ui.fragment.trip_detail;
 
 import android.app.Application;
 
@@ -8,9 +8,9 @@ import com.ultimate.globalangles.ui.base.BaseViewModel;
 
 import javax.inject.Inject;
 
-public class HelpFragmentViewModel extends BaseViewModel {
+public class TripDetailFragmentViewModel extends BaseViewModel {
     @Inject
-    public HelpFragmentViewModel(@NonNull Application application) {
+    public TripDetailFragmentViewModel(@NonNull Application application) {
         super(application);
     }
 }

@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/back_layout_radius"
+    android:paddingBottom="16dp"
     app:layout_behavior="@string/bottom_sheet_behavior">
 
     <RelativeLayout
         android:id="@+id/relv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="386dp"
+        android:layout_height="25dp"
         android:layout_margin="15dp"
         android:padding="5dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -31,70 +33,76 @@
             android:src="@drawable/ic_close" />
     </RelativeLayout>
 
-    <ImageButton
+    <ImageView
         android:id="@+id/btn_add_new_item"
-        android:layout_width="92dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:src="@drawable/ic_addnewitemsvg"
         app:layout_constraintEnd_toStartOf="@+id/btn_pick_online"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/relv" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/btn_pick_online"
-        android:layout_width="92dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_pickonlinesvg"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/relv" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_shop_affiliate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btn_add_new_item"
+        app:layout_constraintTop_toTopOf="@+id/btn_add_new_item" />
 
-    <ImageButton
+    <ImageView
         android:id="@+id/btn_shop_affiliate"
         android:layout_width="92dp"
         android:layout_height="92dp"
-        android:layout_marginTop="30dp"
         android:src="@drawable/ic_shopaffiliatesvg"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_pick_online"
-        app:layout_constraintTop_toBottomOf="@id/relv" />
+        app:layout_constraintTop_toTopOf="@+id/btn_pick_online" />
 
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:gravity="center"
-        android:text="Add new \nitem"
+        android:text="@string/add_new_item"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toStartOf="@+id/txt_pick_online"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_add_new_item"
+        app:layout_constraintStart_toStartOf="@+id/btn_add_new_item"
         app:layout_constraintTop_toBottomOf="@id/btn_add_new_item" />
 
     <TextView
         android:id="@+id/txt_pick_online"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginBottom="15dp"
         android:gravity="center"
-        android:text="Shop from \nAffiliate store"
+        android:text="@string/shop_from_affiliate_store"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_pick_online"
+        app:layout_constraintStart_toStartOf="@+id/btn_pick_online"
         app:layout_constraintTop_toBottomOf="@id/btn_pick_online" />
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:gravity="center"
-        android:text="Pick from \nGA Store"
+        android:text="@string/pick_from_ga_store"
         android:textColor="@color/black"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/txt_pick_online"
+        android:textSize="12sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/btn_shop_affiliate"
+        app:layout_constraintStart_toStartOf="@+id/btn_shop_affiliate"
         app:layout_constraintTop_toBottomOf="@id/btn_shop_affiliate" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
