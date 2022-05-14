@@ -1,20 +1,24 @@
 package com.ultimate.globalangles.ui.fragment.login;
 
+import static com.ultimate.globalangles.utilities.ValidateSt.EMAIL_EMPTY_FILED_ERROR;
+import static com.ultimate.globalangles.utilities.ValidateSt.NOT_EMAIL_ERROR;
+import static com.ultimate.globalangles.utilities.ValidateSt.NO_INTERNET_CONNECTION;
+import static com.ultimate.globalangles.utilities.ValidateSt.PASSWORD_EMPTY_FILED_ERROR;
+import static com.ultimate.globalangles.utilities.ValidateSt.SMALL_PASSWORD_ERROR;
+
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.lifecycle.Observer;
-import androidx.navigation.Navigation;
+import androidx.navigation.fragment.NavHostFragment;
 
+import com.ultimate.globalangles.R;
 import com.ultimate.globalangles.databinding.FragmentLoginBinding;
-import com.ultimate.globalangles.repository.server.responses.base.ResponseState;
 import com.ultimate.globalangles.ui.base.BaseFragment;
-import com.ultimate.globalangles.utilities.state.OnValidateListener;
-import com.ultimate.globalangles.utilities.state.StateUtil;
 
 import javax.annotation.Nullable;
 
@@ -28,42 +32,47 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         bd = FragmentLoginBinding.inflate(getLayoutInflater());
-
-
         return bd.getRoot();
     }
 
 
     @Override
     public void initEvent() {
-        bd.loginBtn.setOnClickListener(new View.OnClickListener() {
+        bd.loginBtn.setOnClickListener(view -> {
+            String email = bd.emailED.getText().toString();
+            String password = bd.passwordED.getText().toString();
+            showProgress(requireContext(), getString(R.string.login), getString(R.string.login));
+            viewModel.validateLogin(requireContext(), email, password);
+        });
+
+        bd.registerLink.setOnClickListener(view ->
+                NavHostFragment.findNavController(requireParentFragment())
+                        .navigate(R.id.actionLoginToRegister)
+        );
+
+        bd.facebookBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(bd.getRoot()).navigate(LoginFragmentDirections.actionLoginFragmentToHomeMainFragment());
 
-
-                String email = bd.email.getText().toString();
-                String password = bd.password.getText().toString();
-                if (!viewModel.validateLogin(requireContext(),email,password).isEmpty()){
-                    Toast.makeText(requireContext(), "some fields empty", Toast.LENGTH_SHORT).show();
-                }
             }
         });
     }
 
     @Override
     public void initObservers() {
-        viewModel.loginResponseStateMDL.observe(this, new Observer<ResponseState>() {
-            @Override
-            public void onChanged(ResponseState responseState) {
-                if (responseState.isSuccessful()){
-                    //do navigate
-                }else {
-                    //show error message
-                    Toast.makeText(requireContext(), ""+responseState.getMessage(), Toast.LENGTH_SHORT).show();
-                }
+        viewModel.loginResponseStateMDL.observe(this, responseState -> {
+            if (responseState.isSuccessful()) {
+                showUserBottomSheet();
+            } else {
+                // todo HANDLE THE SERVER ERRORS
+                Log.d("LoginFragment", "initObservers: 93827: " + responseState.getMessage());
+                //do navigate
             }
         });
+    }
+
+    private void showUserBottomSheet() {
+
     }
 
     @Override
@@ -73,7 +82,36 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
 
     @Override
     public void initErrorObserver() {
+        viewModel.validateResponseStateMDL.observe(getViewLifecycleOwner(), responseState -> {
+            if (!responseState.isSuccessful()) {
+                hideProgress();
+                HandleValidateError(responseState.getMessage());
+            }
+        });
+    }
 
+    private void HandleValidateError(String message) {
+        switch (message) {
+            case NO_INTERNET_CONNECTION:
+                Toast.makeText(requireContext(), getString(R.string.no_internet_connection), Toast.LENGTH_SHORT).show();
+                break;
+
+            case EMAIL_EMPTY_FILED_ERROR:
+                bd.emailED.setError(getString(com.ultimate.globalangles.R.string.empty_email_error));
+                break;
+
+            case NOT_EMAIL_ERROR:
+                bd.emailED.setError(getString(com.ultimate.globalangles.R.string.not_email_error));
+                break;
+
+            case PASSWORD_EMPTY_FILED_ERROR:
+                bd.passwordED.setError(getString(com.ultimate.globalangles.R.string.empty_password_error));
+                break;
+
+            case SMALL_PASSWORD_ERROR:
+                bd.passwordED.setError(getString(com.ultimate.globalangles.R.string.small_password_error));
+                break;
+        }
     }
 }
 

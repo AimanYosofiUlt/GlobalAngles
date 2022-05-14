@@ -16,6 +16,8 @@ public class MainActivity extends BaseActivity<MainActivityViewModel> {
         super.onCreate(savedInstanceState);
         bd = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(bd.getRoot());
+
+
     }
 
     @Override

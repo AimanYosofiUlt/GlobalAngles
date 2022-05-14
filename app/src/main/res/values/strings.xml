@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">GlobalAngles</string>
+    <string name="facebook_app_id">1234</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">56789</string>
+
 
     <string name="no_internet_connection">" No internet connection "</string>
     <string name="couldnt_reach_server">Couldn\'t reach the server!</string>
@@ -112,20 +116,21 @@
     <string name="global_angel">Global Angel:</string>
     <string name="add_another_item_to_the_shipment">+ Add another item to the shipment</string>
     <string name="pre_orders_by">Pre-orders by</string>
-    <string name="categories_to_carry">Categories to carry</string>
     <string name="edit_trip">Edit trip</string>
     <string name="shipments_and_pre_orders">Shipments and pre-orders</string>
     <string name="shipments_on_board">Shipments on board</string>
     <string name="view_deals">View Deals</string>
     <string name="arrival_date">Arrival Date</string>
     <string name="booking_ref">Booking Ref.</string>
-    <string name="receiving_requests_till">Receiving Requests Till</string>
-    <string name="trip_information">Trip information</string>
     <string name="deals_on_this_trip">Deals on this trip</string>
     <string name="add_pre_order_on_this_trip">+ Add pre-order on this trip</string>
     <string name="add_new_item">Add new item</string>
     <string name="shop_from_affiliate_store">Shop from Affiliate store</string>
     <string name="pick_from_ga_store">Pick from GA Store</string>
+    <string name="empty_email_error">You Should Inter An Email</string>
+    <string name="not_email_error">This is no an email address</string>
+    <string name="empty_password_error" >You Should Inter Your Password</string>
+    <string name="small_password_error" >Small Password not allowed</string>
 
     <!-- AffiliateFragment -->\
     <array name="countries">

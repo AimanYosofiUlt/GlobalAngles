@@ -5,6 +5,8 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ultimate.globalangles.databinding.ViewDealBinding;
+
 public class DealViewHolder extends RecyclerView.ViewHolder {
     String data;
     DealViewListener listener;

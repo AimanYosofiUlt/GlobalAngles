@@ -1,9 +1,14 @@
 package com.ultimate.globalangles.ui.fragment.login;
 
+import static com.ultimate.globalangles.utilities.ValidateSt.EMAIL_EMPTY_FILED_ERROR;
+import static com.ultimate.globalangles.utilities.ValidateSt.NOT_EMAIL_ERROR;
+import static com.ultimate.globalangles.utilities.ValidateSt.NO_INTERNET_CONNECTION;
+import static com.ultimate.globalangles.utilities.ValidateSt.PASSWORD_EMPTY_FILED_ERROR;
+import static com.ultimate.globalangles.utilities.ValidateSt.SMALL_PASSWORD_ERROR;
+
 import android.app.Application;
 import android.content.Context;
 import android.util.Log;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
@@ -23,8 +28,9 @@ public class LoginFragmentViewModel extends BaseViewModel {
     @Inject
     UserRepo userRepo;
 
+
     MutableLiveData<ResponseState> loginResponseStateMDL;
-    private static String errorMessage="";
+    MutableLiveData<ResponseState> validateResponseStateMDL;
 
     @Inject
     public LoginFragmentViewModel(@NonNull Application application) {
@@ -32,35 +38,39 @@ public class LoginFragmentViewModel extends BaseViewModel {
         loginResponseStateMDL = new MutableLiveData<>();
     }
 
-    public String validateLogin(Context requireContext, String email, String password) {
-        errorMessage = "";
+    public void validateLogin(Context requireContext, String email, String password) {
         StateUtil.validate(new OnValidateListener() {
-                    @Override
-                    public boolean onValidate() {
-                        if (email.isEmpty()){
-                            LoginFragmentViewModel.setErrorMessage("email is empty");
-                            return false;}
+            @Override
+            public boolean onValidate() {
+                if (email.isEmpty()) {
+                    validateResponseStateMDL.setValue(ResponseState.failureState(EMAIL_EMPTY_FILED_ERROR));
+                    return false;
+                } else if (!email.matches("[a-zA-Z0-9._-]+@[a-z]+\\\\.+[a-z]+")) {
+                    validateResponseStateMDL.setValue(ResponseState.failureState(NOT_EMAIL_ERROR));
+                    return false;
+                }
 
-                        if (password.isEmpty()) {
-                            LoginFragmentViewModel.setErrorMessage("password is empty");
-                        return false;}
-
-                        return true;
-                    }
-                })
+                if (password.isEmpty()) {
+                    validateResponseStateMDL.setValue(ResponseState.failureState(PASSWORD_EMPTY_FILED_ERROR));
+                    return false;
+                } else if (password.length() < 4) {
+                    validateResponseStateMDL.setValue(ResponseState.failureState(SMALL_PASSWORD_ERROR));
+                    return false;
+                }
+                return true;
+            }
+        })
                 .checkNetwork(requireContext, new CheckNetworkListener() {
                     @Override
                     public void onConnect() {
-                        errorMessage = "";
                         login(email, password);
                     }
 
                     @Override
                     public void onDisconnect() {
-                        Toast.makeText(requireContext, "Please check your internet connection!", Toast.LENGTH_SHORT).show();
+                        validateResponseStateMDL.setValue(ResponseState.failureState(NO_INTERNET_CONNECTION));
                     }
                 });
-        return errorMessage;
     }
 
     private void login(String email, String password) {
@@ -77,9 +87,5 @@ public class LoginFragmentViewModel extends BaseViewModel {
 
             }
         });
-    }
-
-    public static void setErrorMessage(String message){
-        errorMessage = message;
     }
 }

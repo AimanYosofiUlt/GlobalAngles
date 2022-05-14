@@ -5,6 +5,8 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ultimate.globalangles.databinding.ViewTripBinding;
+
 public class TripViewHolder extends RecyclerView.ViewHolder {
     String data;
     TripViewListener listener;

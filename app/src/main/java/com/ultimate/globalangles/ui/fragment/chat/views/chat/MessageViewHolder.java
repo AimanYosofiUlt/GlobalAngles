@@ -5,15 +5,17 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.ultimate.globalangles.databinding.ViewMessgeBinding;
+
 public class MessageViewHolder extends RecyclerView.ViewHolder {
     String data;
     MessageViewListener listener;
-    ViewMessageBinding bd;
+    ViewMessgeBinding bd;
 
 
     public MessageViewHolder(@NonNull View itemView, MessageViewListener listener) {
         super(itemView);
-        bd = ViewMessageBinding.bind(itemView);
+        bd = ViewMessgeBinding.bind(itemView);
         this.listener = listener;
         initEvent();
     }
