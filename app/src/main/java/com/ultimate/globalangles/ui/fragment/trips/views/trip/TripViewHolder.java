@@ -11,8 +11,6 @@ public class TripViewHolder extends RecyclerView.ViewHolder {
     String data;
     TripViewListener listener;
     ViewTripBinding bd;
-
-
     public TripViewHolder(@NonNull View itemView, TripViewListener listener) {
         super(itemView);
         bd = ViewTripBinding.bind(itemView);

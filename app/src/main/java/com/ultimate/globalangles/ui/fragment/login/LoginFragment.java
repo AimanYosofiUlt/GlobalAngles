@@ -1,5 +1,6 @@
 package com.ultimate.globalangles.ui.fragment.login;
 
+import static com.ultimate.globalangles.ui.fragment.login.bottomsheets.user_type.UserTypeBottomSheet.SHIPPER_TYPE;
 import static com.ultimate.globalangles.utilities.ValidateSt.EMAIL_EMPTY_FILED_ERROR;
 import static com.ultimate.globalangles.utilities.ValidateSt.NOT_EMAIL_ERROR;
 import static com.ultimate.globalangles.utilities.ValidateSt.NO_INTERNET_CONNECTION;
@@ -19,6 +20,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.ultimate.globalangles.R;
 import com.ultimate.globalangles.databinding.FragmentLoginBinding;
 import com.ultimate.globalangles.ui.base.BaseFragment;
+import com.ultimate.globalangles.ui.fragment.login.bottomsheets.user_type.UserTypeBottomSheet;
 
 import javax.annotation.Nullable;
 
@@ -41,7 +43,7 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
         bd.loginBtn.setOnClickListener(view -> {
             String email = bd.emailED.getText().toString();
             String password = bd.passwordED.getText().toString();
-            showProgress(requireContext(), getString(R.string.login), getString(R.string.login));
+            showProgress(requireContext(), getString(R.string.login), getString(R.string.loading));
             viewModel.validateLogin(requireContext(), email, password);
         });
 
@@ -53,7 +55,7 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
         bd.facebookBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                viewModel.validateLoginViaFacebook(requireContext());
             }
         });
     }
@@ -61,6 +63,7 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
     @Override
     public void initObservers() {
         viewModel.loginResponseStateMDL.observe(this, responseState -> {
+            hideProgress();
             if (responseState.isSuccessful()) {
                 showUserBottomSheet();
             } else {
@@ -72,7 +75,19 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
     }
 
     private void showUserBottomSheet() {
+        UserTypeBottomSheet bottomSheet = new UserTypeBottomSheet(type -> {
+            if (type.equals(SHIPPER_TYPE)) {
+                NavHostFragment
+                        .findNavController(this)
+                        .navigate(LoginFragmentDirections.actionLoginToMainShipper());
+            } else {
+                NavHostFragment
+                        .findNavController(this)
+                        .navigate(LoginFragmentDirections.actionLoginToMainAngle());
+            }
+        });
 
+        bottomSheet.show(requireActivity().getSupportFragmentManager(), "UserType");
     }
 
     @Override
@@ -111,6 +126,9 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
             case SMALL_PASSWORD_ERROR:
                 bd.passwordED.setError(getString(com.ultimate.globalangles.R.string.small_password_error));
                 break;
+
+            default:
+                Log.d("RegisterFragment", "HandleValidateError: You forget to handle this error :" + message);
         }
     }
 }

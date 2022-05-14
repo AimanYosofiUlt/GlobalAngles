@@ -13,6 +13,7 @@ import com.ultimate.globalangles.repository.server.responses.register.RegisterRe
 
 import retrofit2.Call;
 import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
@@ -21,8 +22,6 @@ import retrofit2.http.Query;
 public interface UltimateApi {
     public static final String local = "en";
     public static final String accessToken = "QrTss08To5uuYTTqER2022RMKhadia6";
-    //todo handel bearrer access token
-    public static final String bearerAccessToken = "Bearer ";
 
     @Headers({"AccessToken: " + accessToken,
             "local: " + local})
@@ -37,72 +36,61 @@ public interface UltimateApi {
             , @Query("password_confirmation") String password_confirmation
             , @Query("phone") String phone);
 
-    @Headers({"Authorization: " + bearerAccessToken,
-            "local: " + local})
+    @Headers({"local: " + local})
     @GET("trips")
-    Call<GetTripsResponse> getTrips();
+    Call<GetTripsResponse> getTrips(@Header("Authorization") String bearerAccessToken);
 
-    @Headers({"Authorization: " + bearerAccessToken,
-            "local: " + local})
+    @Headers({"local: " + local})
     @GET("trips/{id}")
-    Call<GetTripResponse> getTrip(@Path("id") int tripId);
+    Call<GetTripResponse> getTrip(@Header("Authorization") String bearerAccessToken, @Path("id") int tripId);
 
 
     @Headers({"AccessToken: " + accessToken,
-            "local: " + local,
-            "Authorization" + bearerAccessToken})
+            "local: " + local})
     @GET("info")
-    Call<GetInfoResponse> getInfo();
+    Call<GetInfoResponse> getInfo(@Header("Authorization") String bearerAccessToken);
 
     @Headers({"AccessToken: " + accessToken
-            , "Authorization" + bearerAccessToken
             , "local: " + local})
     @GET("productFits")
-    Call<GetAllProductFitsResponse> getAllProductAllFits();
+    Call<GetAllProductFitsResponse> getAllProductAllFits(@Header("Authorization") String bearerAccessToken);
 
 
     @Headers({"AccessToken: " + accessToken
-            , "Authorization" + bearerAccessToken
             , "local: " + local})
     @GET("productFits/{id}")
-    Call<GetAllProductFitsResponse> getProductAllFit(@Path("id") int fitId);
+    Call<GetAllProductFitsResponse> getProductAllFit(@Header("Authorization") String bearerAccessToken, @Path("id") int fitId);
 
     @Headers({"AccessToken: " + accessToken
-            , "Authorization" + bearerAccessToken
             , "local: " + local})
     @GET("categories")
-    Call<GetCategoryResponse> getCategories();
+    Call<GetCategoryResponse> getCategories(@Header("Authorization") String bearerAccessToken);
 
 
     @Headers({"AccessToken: " + accessToken
-            , "Authorization" + bearerAccessToken
             , "local: " + local})
     @GET("categories/{id}")
-    Call<GetCategoryResponse> getCategory(@Path("id") int fitId);
+    Call<GetCategoryResponse> getCategory(@Header("Authorization") String bearerAccessToken, @Path("id") int fitId);
 
 
     @Headers({"AccessToken: " + accessToken
-            , "Authorization" + bearerAccessToken
             , "local: " + local})
     @GET("shipments")
-    Call<GetCategoryResponse> getAllShipments();
+    Call<GetCategoryResponse> getAllShipments(@Header("Authorization") String bearerAccessToken);
 
     @Headers({"AccessToken: " + accessToken
-            , "Authorization" + bearerAccessToken
             , "local: " + local})
     @GET("notifications")
-    Call<GetAllNotificationsResponse> getNotifications();
+    Call<GetAllNotificationsResponse> getNotifications(@Header("Authorization") String bearerAccessToken);
 
     @Headers({"AccessToken: " + accessToken
-            , "Authorization" + bearerAccessToken
             , "local: " + local})
     @GET("notifications/{id}")
-    Call<GetNotificationResponse> getNotification(@Path("id") String notificationId);
+    Call<GetNotificationResponse> getNotification(@Header("Authorization") String bearerAccessToken, @Path("id") String notificationId);
 
 
     @Headers({"AccessToken: " + accessToken
-            , "Authorization" + bearerAccessToken
             , "local: " + local})
     @GET("unreads")
-    Call<GetUnreadNotificationsResponse> getUnreadNotifications();
+    Call<GetUnreadNotificationsResponse> getUnreadNotifications(@Header("Authorization") String bearerAccessToken);
 }
