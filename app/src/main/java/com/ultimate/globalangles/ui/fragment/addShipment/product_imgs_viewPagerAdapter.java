@@ -16,7 +16,7 @@ public class product_imgs_viewPagerAdapter extends PagerAdapter {
     private Context context;
     private LayoutInflater layoutInflater;
     //list of images that will be passed later
-    private Integer[] images={R.drawable.iphone_xs,R.drawable.iphone_xs,R.drawable.iphone_xs,R.drawable.iphone_xs,R.drawable.iphone_xs};
+    private Integer[] images={R.drawable.ic_logo,R.drawable.ic_temp_map};
 
     public product_imgs_viewPagerAdapter(Context context)
     {

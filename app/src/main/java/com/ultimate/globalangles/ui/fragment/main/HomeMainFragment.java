@@ -46,7 +46,7 @@ public class HomeMainFragment extends BaseFragment<HomeMainFragmentViewModel> im
 
     private void operateBottomNav() {
         bd.bottomNavigationView.setSelectedItemId(R.id.mainShipperFragment);
-        bd.bottomNavigationView.getMenu().findItem(R.id.mainShipperFragment).setChecked(true);
+      //  bd.bottomNavigationView.getMenu().findItem(R.id.mainShipperFragment).setChecked(true);
     }
 
 

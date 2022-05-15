@@ -39,7 +39,7 @@
         android:id="@+id/mainAngleFragment"
         android:name="com.ultimate.globalangles.ui.fragment.main_angle.MainAngleFragment"
         android:label="MainAngleFragment"
-        tools:layout="@layout/fragment_main_angle" />
+        tools:layout="@layout/fragment_main_angle"/>
     <fragment
         android:id="@+id/mainShipperFragment"
         android:name="com.ultimate.globalangles.ui.fragment.main_shipper.MainShipperFragment"

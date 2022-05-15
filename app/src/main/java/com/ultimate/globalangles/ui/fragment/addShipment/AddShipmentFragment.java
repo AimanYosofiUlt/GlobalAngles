@@ -51,12 +51,12 @@ public class AddShipmentFragment extends BaseFragment<AddShipmentFragmentViewMod
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b){
                     bd.rdImgBackpack.setColorFilter(Color.argb(255, 255, 255, 255));
-                    bd.txtRdBackpack.setTextColor(Color.WHITE);
+                    //bd.rd.setTextColor(Color.WHITE);
                     bd.rdCarryOn.setChecked(false);
                     bd.rdCheckIn.setChecked(false);
                 }else {
                     bd.rdImgBackpack.setColorFilter(getContext().getResources().getColor(R.color.external_btn_color));
-                    bd.txtRdBackpack.setTextColor(getResources().getColor(R.color.external_btn_color));
+                    //bd.txtRdBackpack.setTextColor(getResources().getColor(R.color.external_btn_color));
                 }
             }
         });
@@ -65,13 +65,13 @@ public class AddShipmentFragment extends BaseFragment<AddShipmentFragmentViewMod
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b){
-                    bd.rdImgCarryon.setColorFilter(Color.argb(255, 255, 255, 255));
-                    bd.txtCarryOn.setTextColor(Color.WHITE);
+                    bd.rdImgCarryOn.setColorFilter(Color.argb(255, 255, 255, 255));
+                    //bd.txtCarryOn.setTextColor(Color.WHITE);
                     bd.rdBackpack.setChecked(false);
                     bd.rdCheckIn.setChecked(false);
                 }else {
-                    bd.txtCarryOn.setTextColor(getResources().getColor(R.color.external_btn_color));
-                    bd.rdImgCarryon.setColorFilter(getContext().getResources().getColor(R.color.external_btn_color));
+                    //bd.txtCarryOn.setTextColor(getResources().getColor(R.color.external_btn_color));
+                    bd.rdImgCarryOn.setColorFilter(getContext().getResources().getColor(R.color.external_btn_color));
                 }
             }
         });
@@ -79,13 +79,13 @@ public class AddShipmentFragment extends BaseFragment<AddShipmentFragmentViewMod
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
                 if (b){
-                    bd.rdImgCheckin.setColorFilter(Color.argb(255, 255, 255, 255));
-                    bd.txtCheckIn.setTextColor(Color.WHITE);
+                    bd.rdImgCheckIn.setColorFilter(Color.argb(255, 255, 255, 255));
+                   // bd.txtCheckIn.setTextColor(Color.WHITE);
                     bd.rdCarryOn.setChecked(false);
                     bd.rdBackpack.setChecked(false);
                 }else {
-                    bd.txtCheckIn.setTextColor(getResources().getColor(R.color.external_btn_color));
-                    bd.rdImgCheckin.setColorFilter(getContext().getResources().getColor(R.color.external_btn_color));
+                   // bd.txtCheckIn.setTextColor(getResources().getColor(R.color.external_btn_color));
+                    bd.rdImgCheckIn.setColorFilter(getContext().getResources().getColor(R.color.external_btn_color));
                 }
             }
         });

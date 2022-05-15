@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.Navigation;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.ultimate.globalangles.R;
@@ -41,6 +42,8 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
     @Override
     public void initEvent() {
         bd.loginBtn.setOnClickListener(view -> {
+            Navigation.findNavController(view).navigate(LoginFragmentDirections.actionLoginFragmentToHomeMainFragment());
+
             String email = bd.emailED.getText().toString();
             String password = bd.passwordED.getText().toString();
             showProgress(requireContext(), getString(R.string.login), getString(R.string.loading));
@@ -79,11 +82,11 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
             if (type.equals(SHIPPER_TYPE)) {
                 NavHostFragment
                         .findNavController(this)
-                        .navigate(LoginFragmentDirections.actionLoginToMainShipper());
+                        .navigate(LoginFragmentDirections.actionLoginFragmentToHomeMainFragment());
             } else {
                 NavHostFragment
                         .findNavController(this)
-                        .navigate(LoginFragmentDirections.actionLoginToMainAngle());
+                        .navigate(LoginFragmentDirections.actionLoginToMainAnglet());
             }
         });
 

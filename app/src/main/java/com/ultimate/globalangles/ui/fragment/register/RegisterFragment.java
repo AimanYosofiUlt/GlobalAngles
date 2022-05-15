@@ -72,7 +72,7 @@ public class RegisterFragment extends BaseFragment<RegisterFragmentViewModel> {
             if (type.equals(SHIPPER_TYPE)) {
                 NavHostFragment
                         .findNavController(this)
-                        .navigate(RegisterFragmentDirections.actionRegisterToMainShipper());
+                        .navigate(RegisterFragmentDirections.actionRegisterFragmentToHomeMainFragment());
             } else {
                 NavHostFragment
                         .findNavController(this)

@@ -152,7 +152,7 @@
                 android:id="@+id/img_address"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/ic_location" />
+                android:src="@drawable/ic_address" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -434,7 +434,7 @@
                 android:id="@+id/img_policy"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/ic_policy" />
+                android:src="@drawable/ic_privacy" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -481,7 +481,7 @@
                 android:id="@+id/img_facebook"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
-                android:src="@drawable/ic_facebookx" />
+                android:src="@drawable/ic_faccebookx" />
 
             <TextView
                 android:layout_width="wrap_content"

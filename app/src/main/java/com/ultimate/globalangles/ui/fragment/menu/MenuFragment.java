@@ -13,6 +13,7 @@ import com.ultimate.globalangles.ui.base.BaseFragment;
 import javax.annotation.Nullable;
 
 public class MenuFragment extends BaseFragment {
+    private static final String TAG = "MenuFragment";
 
     FragmentMenuBinding bd;
 
