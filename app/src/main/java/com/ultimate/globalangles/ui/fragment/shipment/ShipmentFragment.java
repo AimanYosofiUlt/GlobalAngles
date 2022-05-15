@@ -33,6 +33,7 @@ public class ShipmentFragment extends BaseFragment<ShipmentFragmentViewModel> {
 
     @Override
     public void initLoading() {
+
     }
 
     @Override

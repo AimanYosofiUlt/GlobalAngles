@@ -43,6 +43,26 @@ public class LoginFragmentViewModel extends BaseViewModel {
         validateResponseStateMDL = new MutableLiveData<>();
     }
 
+    void validateDX(Context context) {
+        StateUtil.validate(new OnValidateListener() {
+            @Override
+            public boolean onValidate() {
+                return OnValidateListener.super.onValidate();
+            }
+        })
+                .checkNetwork(context, new CheckNetworkListener() {
+                    @Override
+                    public void onConnect() {
+
+                    }
+
+                    @Override
+                    public void onDisconnect() {
+
+                    }
+                });
+    }
+
     public void validateLogin(Context requireContext, String email, String password) {
         StateUtil
                 .validate(new OnValidateListener() {
