@@ -1,4 +1,4 @@
-package com.ultimate.globalangles.ui.fragment.main;
+package com.ultimate.globalangles.ui.fragment.home_shipper;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,24 +14,25 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.google.android.material.navigation.NavigationBarView;
-import com.ultimate.globalangles.databinding.FragmentHomeMainLayoutBinding;
+import com.ultimate.globalangles.databinding.FragmentHomeShipperBinding;
 import com.ultimate.globalangles.ui.base.BaseFragment;
 import com.ultimate.globalangles.R;
+import com.ultimate.globalangles.ui.fragment.addShipment.AddShipmentFragment;
+import com.ultimate.globalangles.ui.fragment.affiliate.AffiliateFragment;
 import com.ultimate.globalangles.ui.fragment.bottomSheet.AddNewItemBottomSheetFragment;
-import com.ultimate.globalangles.ui.fragment.main_shipper.MainShipperFragment;
+import com.ultimate.globalangles.ui.fragment.home_shipper.HomeShipperFragmentViewModel;
 import com.ultimate.globalangles.ui.fragment.menu.MenuFragment;
 
 import javax.annotation.Nullable;
 
-public class HomeMainFragment extends BaseFragment<HomeMainFragmentViewModel> implements BottomNavigationView.OnItemSelectedListener {
+public class HomeShipperFragment extends BaseFragment<HomeShipperFragmentViewModel> implements BottomNavigationView.OnItemSelectedListener {
 
-    FragmentHomeMainLayoutBinding bd;
+    FragmentHomeShipperBinding bd;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        bd = FragmentHomeMainLayoutBinding.inflate(getLayoutInflater());
+        bd = FragmentHomeShipperBinding.inflate(getLayoutInflater());
 
         bd.bottomNavigationView.setOnNavigationItemSelectedListener(this::onNavigationItemSelected);
 
@@ -45,8 +46,8 @@ public class HomeMainFragment extends BaseFragment<HomeMainFragmentViewModel> im
     }
 
     private void operateBottomNav() {
-        bd.bottomNavigationView.setSelectedItemId(R.id.mainShipperFragment);
-      //  bd.bottomNavigationView.getMenu().findItem(R.id.mainShipperFragment).setChecked(true);
+        bd.bottomNavigationView.setSelectedItemId(R.id.menuFragment);
+        bd.bottomNavigationView.getMenu().findItem(R.id.menuFragment).setChecked(true);
     }
 
 
@@ -74,13 +75,13 @@ public class HomeMainFragment extends BaseFragment<HomeMainFragmentViewModel> im
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
 
-        if (id == R.id.mainShipperFragment){
-            replacementFragments(new MainShipperFragment());
+        if (id == R.id.shop){
+            replacementFragments(new AddShipmentFragment());
         }else if (id == R.id.menuFragment){
             replacementFragments(new MenuFragment());
         }else if (id == R.id.chats){
             showBottomSheetDialog();
-        }else  replacementFragments(new MainShipperFragment());
+        }else  replacementFragments(new AffiliateFragment());
 
         return true;
     }

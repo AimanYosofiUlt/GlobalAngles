@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/back_main_color">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -78,7 +79,7 @@
             android:id="@+id/lin_images"
             android:layout_width="match_parent"
             android:layout_height="300dp"
-                android:background="@drawable/back_layout_radius"
+            android:background="@drawable/back_layout_radius"
             android:orientation="vertical"
             android:padding="10dp"
             app:layout_constraintTop_toBottomOf="@+id/inc_layout"
@@ -96,8 +97,8 @@
                 android:layout_marginTop="5dp"
                 app:dotsColor="@android:color/holo_red_dark"
                 app:selectedDotColor="@android:color/holo_orange_dark"
-                app:dotsSize="15dp"
-                app:dotsSpacing="5dp"
+                app:dotsSize="8dp"
+                app:dotsSpacing="3dp"
                 app:stiffness="300"
                 android:layout_gravity="center_horizontal"
                 />
@@ -115,14 +116,45 @@
             android:visibility="visible"
             app:layout_constraintTop_toBottomOf="@+id/lin_images">
 
-            <TextView
-                android:id="@+id/txt_product_name"
+            <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Google x1"
-                android:textColor="@color/black"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                >
+                <TextView
+                    android:id="@+id/txt_product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Perfume"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Post Date"
+                        android:textColor="@color/gray_color"
+                        android:textSize="12sp"
+                        android:textStyle="normal"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginRight="3dp"/>
+                    <TextView
+                        android:id="@+id/txt_post_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="15/02/2022"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+            </RelativeLayout>
+
 
             <TextView
                 android:id="@+id/txt_product_price"
@@ -130,9 +162,9 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:layout_marginBottom="8dp"
-                android:text="$200"
+                android:text="$760"
                 android:textColor="@color/primary_color"
-                android:textSize="20sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
 
             <RelativeLayout
@@ -143,40 +175,55 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentStart="true"
-                    android:layout_centerVertical="true"
-                    android:orientation="horizontal"
-                    android:weightSum="3">
-
-                    <ImageButton
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
-                        android:layout_gravity="center_vertical"
-                        android:background="#00FFFFFF"
-                        android:gravity="center"
-                        android:src="@drawable/ic_minus" />
-
+                    android:orientation="vertical">
                     <TextView
-                        android:id="@+id/txt_item_count"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center_vertical"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
-                        android:gravity="center"
-                        android:text="1"
-                        android:textColor="@color/primary_color"
-                        android:textSize="24sp"
-                        android:textStyle="bold" />
+                        android:text="+$55 Angel Reward"
+                        android:textSize="12sp"
+                        android:textColor="#DDC58E"
+                        android:textStyle="bold"
+                        />
 
-                    <ImageButton
-                        android:layout_width="28dp"
-                        android:layout_height="28dp"
-                        android:layout_gravity="center_vertical"
-                        android:background="#00FFFFFF"
-                        android:gravity="center"
-                        android:src="@drawable/ic_plus" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="#00FFFFFF"
+                            android:gravity="center"
+                            android:src="@drawable/ic_minus" />
+
+                        <TextView
+                            android:id="@+id/txt_item_count"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:gravity="center"
+                            android:text="1"
+                            android:textColor="@color/primary_color"
+                            android:textSize="24sp"
+                            android:textStyle="bold" />
+
+                        <ImageButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="#00FFFFFF"
+                            android:gravity="center"
+                            android:src="@drawable/ic_plus" />
+                    </LinearLayout>
                 </LinearLayout>
+
 
                 <Button
                     android:layout_width="129dp"
@@ -187,9 +234,10 @@
                     android:clickable="true"
                     android:drawableEnd="@drawable/ic_external"
                     android:padding="8dp"
-                    android:text="Go to shop"
+                    android:text="Item link"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
+                    android:textSize="12sp"
                     app:elevation="13dp" />
 
             </RelativeLayout>
@@ -209,7 +257,9 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
                 android:layout_marginTop="15dp"
+                android:layout_marginRight="10dp"
                 android:layout_marginBottom="15dp">
 
                 <LinearLayout
@@ -223,8 +273,8 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:src="@drawable/ic_country" />
 
@@ -244,18 +294,29 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_marginTop="5dp"
-                        android:background="@drawable/back_rel_spinner">
+                        android:background="@drawable/rel_back_destination"
+                        android:padding="5dp">
 
-                        <Spinner
-                            android:id="@+id/item_spin_countries_from"
-                            android:layout_width="150dp"
+                        <TextView
+                            android:id="@+id/txt_from"
+                            android:layout_width="130dp"
                             android:layout_height="40dp"
                             android:layout_centerVertical="true"
-                            android:entries="@array/countries" />
+                            android:gravity="center_vertical"
+                            android:text="Egypt"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
 
                     </RelativeLayout>
 
                 </LinearLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_flight"
+                    app:tint="@color/black" />
 
                 <LinearLayout
                     android:layout_width="wrap_content"
@@ -269,8 +330,8 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:src="@drawable/ic_country" />
 
@@ -290,124 +351,23 @@
                         android:layout_width="wrap_content"
                         android:layout_height="50dp"
                         android:layout_marginTop="5dp"
-                        android:background="@drawable/back_rel_spinner">
+                        android:background="@drawable/rel_back_destination"
+                        android:padding="5dp">
 
-                        <Spinner
-                            android:id="@+id/item_spin_countries_destination"
-                            android:layout_width="150dp"
+                        <TextView
+                            android:id="@+id/txt_destination"
+                            android:layout_width="130dp"
                             android:layout_height="40dp"
                             android:layout_centerVertical="true"
-                            android:entries="@array/countries" />
+                            android:gravity="center_vertical"
+                            android:text="Egypt"
+                            android:textColor="@color/black"
+                            android:textSize="14sp" />
 
                     </RelativeLayout>
 
                 </LinearLayout>
             </RelativeLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginRight="5dp"
-                        android:src="@drawable/ic_category" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:text="Item Category"
-                        android:textColor="#6F6F6F"
-                        android:textSize="18sp"
-                        android:textStyle="normal" />
-                </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/back_rel_spinner">
-
-                    <Spinner
-                        android:id="@+id/item_spin_category"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_centerVertical="true"
-                        android:entries="@array/countries" />
-
-                </RelativeLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="8dp"
-                android:orientation="vertical">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:layout_marginRight="5dp"
-                        android:src="@drawable/ic_category" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:text="Delivery Before"
-                        android:textColor="#6F6F6F"
-                        android:textSize="18sp"
-                        android:textStyle="normal" />
-                </LinearLayout>
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="5dp"
-                    android:background="@drawable/back_rel_spinner">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:padding="5dp"
-                        android:text="4 Dec 2022"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
-                </RelativeLayout>
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/lin_weight"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:background="@color/white"
-            android:orientation="vertical"
-            android:padding="10dp"
-            android:visibility="visible"
-            app:layout_constraintTop_toBottomOf="@id/lin_destination_details">
-
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -422,10 +382,10 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/ic_category" />
+                        android:src="@drawable/ic_weight" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -434,7 +394,7 @@
                         android:layout_marginRight="5dp"
                         android:text="Item Weight"
                         android:textColor="#6F6F6F"
-                        android:textSize="18sp"
+                        android:textSize="14sp"
                         android:textStyle="normal" />
                 </LinearLayout>
 
@@ -442,7 +402,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
                     android:layout_marginTop="5dp"
-                    android:background="@drawable/back_rel_spinner"
+                    android:background="@drawable/rel_back_destination"
                     android:padding="10dp">
 
                     <TextView
@@ -472,8 +432,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
                         android:src="@drawable/ic_canfit" />
 
@@ -484,7 +444,7 @@
                         android:layout_marginRight="5dp"
                         android:text="Can Fit in"
                         android:textColor="#6F6F6F"
-                        android:textSize="18sp"
+                        android:textSize="14sp"
                         android:textStyle="normal" />
                 </LinearLayout>
 
@@ -564,8 +524,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_marginRight="5dp"
                         android:src="@drawable/ic_description" />
 
@@ -576,14 +536,14 @@
                         android:layout_marginRight="5dp"
                         android:text="Description"
                         android:textColor="#6F6F6F"
-                        android:textSize="18sp"
+                        android:textSize="14sp"
                         android:textStyle="normal" />
                 </LinearLayout>
 
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/back_rel_spinner"
+                    android:background="@drawable/rel_back_destination"
                     android:padding="8dp">
 
                     <TextView
@@ -599,6 +559,7 @@
 
 
         <LinearLayout
+            android:id="@+id/lin_comments"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -606,7 +567,128 @@
             android:orientation="vertical"
             android:padding="10dp"
             android:visibility="visible"
-            app:layout_constraintTop_toBottomOf="@id/lin_weight">
+            app:layout_constraintTop_toBottomOf="@id/lin_destination_details">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="Comments"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/rel_back_destination"
+                    android:padding="10dp">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rec_comments"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                    <Button
+                        android:id="@+id/see_all_comments_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/back_see_all"
+                        android:text="see all(15)"
+                        android:textAllCaps="false"
+                        android:textColor="@color/primary_color"
+                        android:textSize="14sp"
+                        android:layout_alignParentBottom="true"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="5dp"
+                        android:src="@drawable/ic_sendmessage" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:text="Comment/Ask For Details"
+                        android:textColor="#6F6F6F"
+                        android:textSize="14sp"
+                        android:textStyle="normal" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:background="@drawable/back_rel_spinner"
+                    android:padding="8dp">
+
+                    <EditText
+                        android:layout_width="270dp"
+                        android:layout_height="match_parent"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"
+                        android:background="@color/white"
+                        android:gravity="top"
+                        android:hint="add your comment..."/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="38dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@drawable/click_button"
+                        android:text="Send"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@id/lin_comments">
 
             <LinearLayout
                 android:layout_width="match_parent"

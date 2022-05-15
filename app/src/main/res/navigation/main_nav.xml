@@ -44,9 +44,11 @@
     <fragment
         android:id="@+id/homeShipperFragment"
         android:name="com.ultimate.globalangles.ui.fragment.home_shipper.HomeShipperFragment"
-        android:label="HomeShipperFragment" />
+        android:label="HomeShipperFragment"
+        tools:layout="@layout/fragment_home_shipper"/>
     <fragment
         android:id="@+id/homeAngleFragment"
         android:name="com.ultimate.globalangles.ui.fragment.home_angle.HomeAngleFragment"
-        android:label="HomeAngleFragment" />
+        android:label="HomeAngleFragment"
+        tools:layout="@layout/fragment_home_angle"/>
 </navigation>

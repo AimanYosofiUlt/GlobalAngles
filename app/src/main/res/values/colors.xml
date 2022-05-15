@@ -18,4 +18,5 @@
     <color name="green_color">#16A045</color>
     <color name="orange_color">#FC6C21</color>
     <color name="info_color">#F7F6FD</color>
+    <color name="destination_color">#F7F6FD</color>
 </resources>
