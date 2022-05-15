@@ -1,25 +1,24 @@
-package com.ultimate.globalangles.repository.server.responses.get_one_trip;
+package com.ultimate.globalangles.repository.server.responses.create_trip;
 
 import com.google.gson.annotations.SerializedName;
-import com.ultimate.globalangles.repository.server.responses.get_trips.Meta;
-import com.ultimate.globalangles.repository.server.responses.get_trips.TripCateogries;
-import com.ultimate.globalangles.repository.server.responses.get_trips.TripProduct;
+import com.ultimate.globalangles.repository.server.responses.create_shipment.Meta;
+import com.ultimate.globalangles.repository.server.responses.create_shipment.Products;
 
 import java.util.List;
 
-public class GetTripData {
+public class CreateTripData {
     @SerializedName("meta")
     private Meta meta;
     @SerializedName("products")
-    private List<TripProduct> products;
+    private List<Products> products;
     @SerializedName("cateogries")
-    private List<TripCateogries> cateogries;
+    private List<Cateogries> cateogries;
     @SerializedName("trip_created_at")
     private String trip_created_at;
     @SerializedName("consumed_weight")
-    private String consumed_weight;
+    private int consumed_weight;
     @SerializedName("avaliable_weight")
-    private String avaliable_weight;
+    private int avaliable_weight;
     @SerializedName("total_rewards")
     private String total_rewards;
     @SerializedName("trip_arrive_date")
@@ -41,19 +40,19 @@ public class GetTripData {
         this.meta = meta;
     }
 
-    public List<TripProduct> getProducts() {
+    public List<Products> getProducts() {
         return products;
     }
 
-    public void setProducts(List<TripProduct> products) {
+    public void setProducts(List<Products> products) {
         this.products = products;
     }
 
-    public List<TripCateogries> getCateogries() {
+    public List<Cateogries> getCateogries() {
         return cateogries;
     }
 
-    public void setCateogries(List<TripCateogries> cateogries) {
+    public void setCateogries(List<Cateogries> cateogries) {
         this.cateogries = cateogries;
     }
 
@@ -65,19 +64,19 @@ public class GetTripData {
         this.trip_created_at = trip_created_at;
     }
 
-    public String getConsumed_weight() {
+    public int getConsumed_weight() {
         return consumed_weight;
     }
 
-    public void setConsumed_weight(String consumed_weight) {
+    public void setConsumed_weight(int consumed_weight) {
         this.consumed_weight = consumed_weight;
     }
 
-    public String getAvaliable_weight() {
+    public int getAvaliable_weight() {
         return avaliable_weight;
     }
 
-    public void setAvaliable_weight(String avaliable_weight) {
+    public void setAvaliable_weight(int avaliable_weight) {
         this.avaliable_weight = avaliable_weight;
     }
 

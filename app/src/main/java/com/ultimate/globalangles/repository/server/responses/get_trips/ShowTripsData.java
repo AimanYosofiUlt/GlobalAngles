@@ -8,7 +8,7 @@ public class ShowTripsData {
     @SerializedName("meta")
     private Meta meta;
     @SerializedName("products")
-    private List<String> products;
+    private List<TripProduct>  products;
     @SerializedName("cateogries")
     private List<TripCateogries> cateogries;
     @SerializedName("trip_created_at")
@@ -38,11 +38,11 @@ public class ShowTripsData {
         this.meta = meta;
     }
 
-    public List<String> getProducts() {
+    public List<TripProduct> getProducts() {
         return products;
     }
 
-    public void setProducts(List<String> products) {
+    public void setProducts(List<TripProduct> products) {
         this.products = products;
     }
 

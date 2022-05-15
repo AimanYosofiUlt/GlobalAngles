@@ -1,5 +1,9 @@
 package com.ultimate.globalangles.repository.server.remote;
 
+import com.ultimate.globalangles.repository.server.requests.create_shipment.CreateShipmentPostBody;
+import com.ultimate.globalangles.repository.server.requests.create_trip.CreateTripPostBody;
+import com.ultimate.globalangles.repository.server.responses.create_shipment.CreateShipmentResponse;
+import com.ultimate.globalangles.repository.server.responses.create_trip.CreateTripResponse;
 import com.ultimate.globalangles.repository.server.responses.get_all_notifications.GetAllNotificationsResponse;
 import com.ultimate.globalangles.repository.server.responses.get_all_product_fit.GetAllProductFitsResponse;
 import com.ultimate.globalangles.repository.server.responses.get_all_unread_notifications.GetUnreadNotificationsResponse;
@@ -12,6 +16,7 @@ import com.ultimate.globalangles.repository.server.responses.login.LoginResponse
 import com.ultimate.globalangles.repository.server.responses.register.RegisterResponse;
 
 import retrofit2.Call;
+import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.Header;
 import retrofit2.http.Headers;
@@ -93,4 +98,16 @@ public interface UltimateApi {
             , "local: " + local})
     @GET("unreads")
     Call<GetUnreadNotificationsResponse> getUnreadNotifications(@Header("Authorization") String bearerAccessToken);
+
+    @Headers({"AccessToken: " + accessToken
+            , "local: " + local})
+    @POST("shipments")
+    Call<CreateShipmentResponse> createShipment(@Header("Authorization") String bearerAccessToken, @Body CreateShipmentPostBody postBody);
+
+
+    @Headers({"AccessToken: " + accessToken
+            , "local: " + local})
+    @POST("trips")
+    Call<CreateTripResponse> createTrip(@Header("Authorization") String bearerAccessToken, @Body CreateTripPostBody postBody);
+
 }

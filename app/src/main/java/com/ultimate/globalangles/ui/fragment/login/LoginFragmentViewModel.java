@@ -12,9 +12,11 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
+import com.ultimate.globalangles.repository.repos.setting.SettingRepo;
 import com.ultimate.globalangles.repository.repos.user.UserRepo;
 import com.ultimate.globalangles.repository.server.responses.base.ResponseState;
 import com.ultimate.globalangles.repository.server.responses.base.ResponsesCallBack;
+import com.ultimate.globalangles.repository.server.responses.info.GetInfoResponse;
 import com.ultimate.globalangles.repository.server.responses.login.LoginResponse;
 import com.ultimate.globalangles.ui.base.BaseViewModel;
 import com.ultimate.globalangles.utilities.ValidateSt;
@@ -28,6 +30,9 @@ public class LoginFragmentViewModel extends BaseViewModel {
     @Inject
     UserRepo userRepo;
 
+    @Inject
+    SettingRepo settingRepo;
+
     MutableLiveData<ResponseState> loginResponseStateMDL;
     MutableLiveData<ResponseState> validateResponseStateMDL;
 
@@ -39,29 +44,30 @@ public class LoginFragmentViewModel extends BaseViewModel {
     }
 
     public void validateLogin(Context requireContext, String email, String password) {
-        StateUtil.validate(new OnValidateListener() {
-            @Override
-            public boolean onValidate() {
-                String emailPattern = "[a-zA-Z][a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
+        StateUtil
+                .validate(new OnValidateListener() {
+                    @Override
+                    public boolean onValidate() {
+                        String emailPattern = "[a-zA-Z][a-zA-Z0-9._-]+@[a-z]+\\.+[a-z]+";
 
-                if (email.trim().isEmpty()) {
-                    validateResponseStateMDL.setValue(ResponseState.failureState(EMAIL_EMPTY_FILED_ERROR));
-                    return false;
-                } else if (!email.trim().matches(emailPattern)) {
-                    validateResponseStateMDL.setValue(ResponseState.failureState(NOT_EMAIL_ERROR));
-                    return false;
-                }
+                        if (email.trim().isEmpty()) {
+                            validateResponseStateMDL.setValue(ResponseState.failureState(EMAIL_EMPTY_FILED_ERROR));
+                            return false;
+                        } else if (!email.trim().matches(emailPattern)) {
+                            validateResponseStateMDL.setValue(ResponseState.failureState(NOT_EMAIL_ERROR));
+                            return false;
+                        }
 
-                if (password.trim().isEmpty()) {
-                    validateResponseStateMDL.setValue(ResponseState.failureState(PASSWORD_EMPTY_FILED_ERROR));
-                    return false;
-                } else if (password.trim().length() < 8) {
-                    validateResponseStateMDL.setValue(ResponseState.failureState(SMALL_PASSWORD_ERROR));
-                    return false;
-                }
-                return true;
-            }
-        })
+                        if (password.trim().isEmpty()) {
+                            validateResponseStateMDL.setValue(ResponseState.failureState(PASSWORD_EMPTY_FILED_ERROR));
+                            return false;
+                        } else if (password.trim().length() < 8) {
+                            validateResponseStateMDL.setValue(ResponseState.failureState(SMALL_PASSWORD_ERROR));
+                            return false;
+                        }
+                        return true;
+                    }
+                })
                 .checkNetwork(requireContext, new CheckNetworkListener() {
                     @Override
                     public void onConnect() {
@@ -80,8 +86,9 @@ public class LoginFragmentViewModel extends BaseViewModel {
             @Override
             public void onSuccess(LoginResponse response) {
                 ValidateSt.bearerAccessToken = "Bearer " + response.getData().getAccessToken();
-                loginResponseStateMDL.setValue(ResponseState.successState());
+                getBasicInfo();
             }
+
 
             @Override
             public void onFailure(String state, String errors) {
@@ -109,5 +116,19 @@ public class LoginFragmentViewModel extends BaseViewModel {
 
                     }
                 });
+    }
+
+    private void getBasicInfo() {
+        settingRepo.getBasicInfo(new ResponsesCallBack<GetInfoResponse>() {
+            @Override
+            public void onSuccess(GetInfoResponse response) {
+                loginResponseStateMDL.setValue(ResponseState.successState());
+            }
+
+            @Override
+            public void onFailure(String state, String errors) {
+                loginResponseStateMDL.setValue(ResponseState.failureState(errors));
+            }
+        });
     }
 }

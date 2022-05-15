@@ -15,9 +15,11 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.MutableLiveData;
 
+import com.ultimate.globalangles.repository.repos.setting.SettingRepo;
 import com.ultimate.globalangles.repository.repos.user.UserRepo;
 import com.ultimate.globalangles.repository.server.responses.base.ResponseState;
 import com.ultimate.globalangles.repository.server.responses.base.ResponsesCallBack;
+import com.ultimate.globalangles.repository.server.responses.info.GetInfoResponse;
 import com.ultimate.globalangles.repository.server.responses.register.RegisterResponse;
 import com.ultimate.globalangles.ui.base.BaseViewModel;
 import com.ultimate.globalangles.utilities.ValidateSt;
@@ -30,6 +32,9 @@ import javax.inject.Inject;
 public class RegisterFragmentViewModel extends BaseViewModel {
     @Inject
     UserRepo userRepo;
+
+    @Inject
+    SettingRepo settingRepo;
 
     MutableLiveData<ResponseState> registerResponseStateMDL;
     MutableLiveData<ResponseState> validateResponseStateMDL;
@@ -99,6 +104,20 @@ public class RegisterFragmentViewModel extends BaseViewModel {
             @Override
             public void onSuccess(RegisterResponse response) {
                 ValidateSt.bearerAccessToken = "Bearer " + response.getData().getAccessToken();
+                getBasicInfo();
+            }
+
+            @Override
+            public void onFailure(String state, String errors) {
+                registerResponseStateMDL.setValue(ResponseState.failureState(errors));
+            }
+        });
+    }
+
+    private void getBasicInfo() {
+        settingRepo.getBasicInfo(new ResponsesCallBack<GetInfoResponse>() {
+            @Override
+            public void onSuccess(GetInfoResponse response) {
                 registerResponseStateMDL.setValue(ResponseState.successState());
             }
 
@@ -108,4 +127,6 @@ public class RegisterFragmentViewModel extends BaseViewModel {
             }
         });
     }
+
+
 }
