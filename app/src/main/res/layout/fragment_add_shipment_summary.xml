@@ -33,7 +33,7 @@
             android:layout_marginBottom="10dp"
             android:text="Add shipment"
             android:textColor="@color/black"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -130,8 +130,8 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:src="@drawable/ic_country" />
 
@@ -162,15 +162,15 @@
                             android:gravity="center_vertical"
                             android:text="Egypt"
                             android:textColor="@color/black"
-                            android:textSize="18sp" />
+                            android:textSize="14sp" />
 
                     </RelativeLayout>
 
                 </LinearLayout>
 
                 <ImageView
-                    android:layout_width="38dp"
-                    android:layout_height="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
                     android:src="@drawable/ic_flight"
                     app:tint="@color/black" />
@@ -187,8 +187,8 @@
                         android:orientation="horizontal">
 
                         <ImageView
-                            android:layout_width="15dp"
-                            android:layout_height="15dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
                             android:src="@drawable/ic_country" />
 
@@ -219,7 +219,7 @@
                             android:gravity="center_vertical"
                             android:text="Egypt"
                             android:textColor="@color/black"
-                            android:textSize="18sp" />
+                            android:textSize="14sp" />
 
                     </RelativeLayout>
 
@@ -260,7 +260,7 @@
                     android:layout_alignParentStart="true"
                     android:text="Deliver To"
                     android:textColor="@color/black"
-                    android:textSize="17sp"
+                    android:textSize="14sp"
                     android:textStyle="normal" />
 
                 <TextView
@@ -269,7 +269,7 @@
                     android:layout_alignParentEnd="true"
                     android:text="+ Add new address"
                     android:textColor="@color/primary_color"
-                    android:textSize="17sp"
+                    android:textSize="12sp"
                     android:textStyle="normal" />
             </RelativeLayout>
 
@@ -294,14 +294,14 @@
                         android:layout_height="wrap_content"
                         android:text="Home"
                         android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="52 Arafat St. In Front Of Elamal Hospital Hadayek Elkobba"
                         android:textColor="#717171"
-                        android:textSize="13sp" />
+                        android:textSize="10sp" />
                 </LinearLayout>
             </LinearLayout>
 
@@ -327,14 +327,14 @@
                         android:layout_height="wrap_content"
                         android:text="Work"
                         android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:textSize="14sp" />
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="13 El-Sheikh Mohamed Abdou St., Ard El-Gamiya, Embaba, Giza."
                         android:textColor="#717171"
-                        android:textSize="13sp" />
+                        android:textSize="10sp" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -363,7 +363,7 @@
                     android:layout_alignParentStart="true"
                     android:text="Summary"
                     android:textColor="@color/black"
-                    android:textSize="17sp"
+                    android:textSize="14sp"
                     android:textStyle="normal" />
 
             </RelativeLayout>
@@ -379,7 +379,7 @@
                     android:layout_alignParentStart="true"
                     android:text="Items Cost:"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textStyle="normal" />
 
                 <TextView
@@ -388,7 +388,7 @@
                     android:layout_alignParentEnd="true"
                     android:text="$205"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
             </RelativeLayout>
@@ -404,7 +404,7 @@
                     android:layout_alignParentStart="true"
                     android:text="Angel Reward:"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textStyle="normal" />
 
                 <TextView
@@ -413,7 +413,7 @@
                     android:layout_alignParentEnd="true"
                     android:text="$205"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
             </RelativeLayout>
@@ -429,7 +429,7 @@
                     android:layout_alignParentStart="true"
                     android:text="Delivery Fees:"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textStyle="normal" />
 
                 <TextView
@@ -438,7 +438,7 @@
                     android:layout_alignParentEnd="true"
                     android:text="$205"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
             </RelativeLayout>
@@ -463,7 +463,7 @@
                     android:layout_alignParentStart="true"
                     android:text="Total"
                     android:textColor="@color/black"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textStyle="normal" />
 
                 <TextView
@@ -472,7 +472,7 @@
                     android:layout_alignParentEnd="true"
                     android:text="$780"
                     android:textColor="@color/primary_color"
-                    android:textSize="15sp"
+                    android:textSize="14sp"
                     android:textStyle="bold" />
 
             </RelativeLayout>
@@ -506,7 +506,7 @@
                 android:text="+Add new items"
                 android:textAllCaps="false"
                 android:textColor="@color/primary_color"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
 
             <Button
@@ -520,7 +520,7 @@
                 android:text="Post Shipment"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                android:textSize="15sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
 

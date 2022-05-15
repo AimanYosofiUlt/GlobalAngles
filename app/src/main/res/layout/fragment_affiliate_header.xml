@@ -158,12 +158,13 @@
             android:layout_marginRight="5dp"
             android:background="@drawable/back_search_edittext"
             android:layout_weight="1">
+
             <Spinner
                 android:id="@+id/spin_countries"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:entries="@array/countries"/>
+                android:entries="@array/countries" />
 
         </RelativeLayout>
 
@@ -174,13 +175,13 @@
             android:layout_weight="1"
             android:layout_marginLeft="10dp"
             android:background="@drawable/back_search_edittext">
+
             <Spinner
                 android:id="@+id/spin_categories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:entries="@array/categories"
-                />
+                android:entries="@array/categories" />
 
         </RelativeLayout>
     </LinearLayout>

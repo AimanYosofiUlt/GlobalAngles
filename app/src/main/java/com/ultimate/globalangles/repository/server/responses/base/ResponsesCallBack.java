@@ -8,7 +8,9 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public abstract class ResponsesCallBack<T extends ResponseObject> implements Callback<T> {
+public abstract class
+
+ResponsesCallBack<T extends ResponseObject> implements Callback<T> {
     public abstract void onSuccess(T response);
 
     public abstract void onFailure(String state, String errors);
