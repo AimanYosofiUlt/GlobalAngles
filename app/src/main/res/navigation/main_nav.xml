@@ -20,43 +20,33 @@
         android:label="LoginFragment"
         tools:layout="@layout/fragment_login">
         <action
-            android:id="@+id/actionLoginToMainAngle"
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true"
-            app:destination="@id/mainAngleFragment" />
-        <action
             android:id="@+id/actionLoginToRegister"
             app:destination="@id/registerFragment" />
         <action
-            android:id="@+id/actionLoginToMainShipper"
-            app:destination="@id/mainShipperFragment"
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/actionLoginToHomeShipper"
+            app:destination="@id/homeShipperFragment" />
+        <action
+            android:id="@+id/actionLoginToHomeAngle"
+            app:destination="@id/homeAngleFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/mainAngleFragment"
-        android:name="com.ultimate.globalangles.ui.fragment.main_angle.MainAngleFragment"
-        android:label="MainAngleFragment"
-        tools:layout="@layout/fragment_main_angle" />
-    <fragment
-        android:id="@+id/mainShipperFragment"
-        android:name="com.ultimate.globalangles.ui.fragment.main_shipper.MainShipperFragment"
-        android:label="MainShipperFragment"
-        tools:layout="@layout/fragment_main_shipper" />
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.ultimate.globalangles.ui.fragment.register.RegisterFragment"
         android:label="RegisterFragment"
         tools:layout="@layout/fragment_register">
         <action
-            app:popUpTo="@id/loginFragment"
-            app:popUpToInclusive="true"
-            android:id="@+id/actionRegisterToMainAngle"
-            app:destination="@id/mainAngleFragment" />
+            android:id="@+id/actionRegisterToHomeAngle"
+            app:destination="@id/homeAngleFragment" />
         <action
-            android:id="@+id/actionRegisterToMainShipper"
-            app:destination="@id/mainShipperFragment"
-            app:popUpTo="@id/registerFragment"
-            app:popUpToInclusive="true" />
+            android:id="@+id/actionRegisterToHomeShipper"
+            app:destination="@id/homeShipperFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/homeShipperFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.home_shipper.HomeShipperFragment"
+        android:label="HomeShipperFragment" />
+    <fragment
+        android:id="@+id/homeAngleFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.home_angle.HomeAngleFragment"
+        android:label="HomeAngleFragment" />
 </navigation>

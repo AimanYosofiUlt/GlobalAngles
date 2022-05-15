@@ -69,15 +69,15 @@ public class RegisterFragment extends BaseFragment<RegisterFragmentViewModel> {
 
     private void showUserBottomSheet() {
         UserTypeBottomSheet bottomSheet = new UserTypeBottomSheet(type -> {
-            if (type.equals(SHIPPER_TYPE)) {
-                NavHostFragment
-                        .findNavController(this)
-                        .navigate(RegisterFragmentDirections.actionRegisterToMainShipper());
-            } else {
-                NavHostFragment
-                        .findNavController(this)
-                        .navigate(RegisterFragmentDirections.actionRegisterToMainAngle());
-            }
+//            if (type.equals(SHIPPER_TYPE)) {
+//                NavHostFragment
+//                        .findNavController(this)
+//                        .navigate(RegisterFragmentDirections.actionRegisterToMainShipper());
+//            } else {
+//                NavHostFragment
+//                        .findNavController(this)
+//                        .navigate(RegisterFragmentDirections.actionRegisterToMainAngle());
+//            }
         });
 
         bottomSheet.show(requireActivity().getSupportFragmentManager(), "UserType");
