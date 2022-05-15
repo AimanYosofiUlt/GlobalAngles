@@ -475,7 +475,7 @@
                         android:layout_width="20dp"
                         android:layout_height="20dp"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/ic_can_fit" />
+                        android:src="@drawable/ic_canfit" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -491,44 +491,23 @@
                 <RadioGroup
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="5dp">
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
                     <RelativeLayout
                         android:layout_width="120dp"
                         android:layout_height="40dp">
+
                         <RadioButton
-                            android:id="@+id/rd_backpack"
+                            style="@style/radio_button2"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:button="@android:color/transparent"
-                            android:background="@drawable/back_fit_in_radio"
-                            />
-                        <LinearLayout
-                            android:layout_width="120dp"
-                            android:layout_height="40dp"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:background="@drawable/back_rel_spinner"
+                            android:layout_height="wrap_content"
+                            android:checked="true"
+                            android:drawableStart="@drawable/ic_backpack"
+                            android:drawablePadding="10dp"
                             android:padding="10dp"
-                            android:layout_centerVertical="true"
-                            >
-                            <ImageView
-                                android:id="@+id/rd_img_backpack"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:src="@drawable/ic_backpack"
-                                app:tint="@color/external_btn_color"
-                                android:layout_marginRight="5dp"
-                                android:layout_marginLeft="5dp"/>
-                            <TextView
-                                android:id="@+id/txt_rd_backpack"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Backpack"
-                                android:textSize="14sp"
-                                android:textColor="@color/external_btn_color"
-                                />
-                        </LinearLayout>
+                            android:text="@string/backpack" />
+
 
                     </RelativeLayout>
 
@@ -536,82 +515,35 @@
                     <RelativeLayout
                         android:layout_width="120dp"
                         android:layout_height="40dp"
-                        android:layout_marginRight="10dp"
-                        android:layout_marginLeft="10dp">
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp">
+
                         <RadioButton
-                            android:id="@+id/rd_carry_on"
+                            style="@style/radio_button2"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:button="@android:color/transparent"
-                            android:background="@drawable/back_fit_in_radio"
-                            />
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:drawableStart="@drawable/ic_carryon"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:text="@string/carty_on" />
 
-                        <LinearLayout
-                            android:layout_width="120dp"
-                            android:layout_height="40dp"
-                            android:layout_centerVertical="true"
-                            android:background="@drawable/back_rel_spinner"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:id="@+id/rd_img_carry_on"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                android:src="@drawable/ic_carry_on"
-                                app:tint="@color/external_btn_color" />
-
-                            <TextView
-                                android:id="@+id/txt_rd_carry_on"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Carry On"
-                                android:textColor="@color/external_btn_color"
-                                android:textSize="14sp" />
-                        </LinearLayout>
 
                     </RelativeLayout>
 
                     <RelativeLayout
                         android:layout_width="120dp"
                         android:layout_height="40dp">
+
                         <RadioButton
-                            android:id="@+id/rd_check_in"
+                            style="@style/radio_button2"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:button="@android:color/transparent"
-                            android:background="@drawable/back_fit_in_radio"
-                            />
-
-                        <LinearLayout
-                            android:layout_width="120dp"
-                            android:layout_height="40dp"
-                            android:layout_centerVertical="true"
-                            android:background="@drawable/back_rel_spinner"
-                            android:gravity="center_vertical"
-                            android:orientation="horizontal"
-                            android:padding="10dp">
-
-                            <ImageView
-                                android:id="@+id/rd_img_check_in"
-                                android:layout_width="20dp"
-                                android:layout_height="20dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                android:src="@drawable/ic_check_in"
-                                app:tint="@color/external_btn_color" />
-
-                            <TextView
-                                android:id="@+id/txt_rd_check_in"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Check In"
-                                android:textColor="@color/external_btn_color"
-                                android:textSize="14sp" />
-                        </LinearLayout>
+                            android:layout_height="wrap_content"
+                            android:checked="false"
+                            android:drawableStart="@drawable/ic_checkin"
+                            android:drawablePadding="10dp"
+                            android:padding="10dp"
+                            android:text="@string/check_in" />
 
                     </RelativeLayout>
                 </RadioGroup>

@@ -1,12 +1,12 @@
-package com.ultimate.globalangles.ui.fragment.main_angle;
+package com.ultimate.globalangles.ui.fragment.home_angle;
 import android.app.Application;
 import androidx.annotation.NonNull;
 import com.ultimate.globalangles.ui.base.BaseViewModel;
 import javax.inject.Inject;
 
-public class MainAngleFragmentViewModel extends BaseViewModel {
+public class HomeAngleFragmentViewModel extends BaseViewModel {
     @Inject
-    public MainAngleFragmentViewModel(@NonNull Application application) {
+    public HomeAngleFragmentViewModel(@NonNull Application application) {
         super(application);
     }
 }
