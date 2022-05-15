@@ -50,5 +50,13 @@
         android:id="@+id/homeAngleFragment"
         android:name="com.ultimate.globalangles.ui.fragment.home_angle.HomeAngleFragment"
         android:label="HomeAngleFragment"
-        tools:layout="@layout/fragment_home_angle"/>
+        tools:layout="@layout/fragment_home_angle">
+        <action
+            android:id="@+id/actionHomeAngleTripEdit"
+            app:destination="@id/tripEditFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/tripEditFragment2"
+        android:name="com.ultimate.globalangles.ui.fragment.trip_edit.TripEditFragment"
+        android:label="TripEditFragment" />
 </navigation>
