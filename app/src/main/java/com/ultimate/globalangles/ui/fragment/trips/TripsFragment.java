@@ -17,6 +17,11 @@ import dagger.hilt.android.AndroidEntryPoint;
 @AndroidEntryPoint
 public class TripsFragment extends BaseFragment<TripsFragmentViewModel> {
     FragmentTripsBinding bd;
+    TripFragmentListener listener;
+
+    public TripsFragment(TripFragmentListener listener) {
+        this.listener = listener;
+    }
 
     @Nullable
     @Override
@@ -28,7 +33,12 @@ public class TripsFragment extends BaseFragment<TripsFragmentViewModel> {
 
     @Override
     public void initEvent() {
-
+        bd.addBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                listener.onAddTripReq();
+            }
+        });
     }
 
     @Override

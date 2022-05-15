@@ -8,6 +8,7 @@ import com.ultimate.globalangles.repository.server.responses.get_all_notificatio
 import com.ultimate.globalangles.repository.server.responses.get_all_product_fit.GetAllProductFitsResponse;
 import com.ultimate.globalangles.repository.server.responses.get_all_unread_notifications.GetUnreadNotificationsResponse;
 import com.ultimate.globalangles.repository.server.responses.get_category.GetCategoryResponse;
+import com.ultimate.globalangles.repository.server.responses.get_locations.GetLocationsResponse;
 import com.ultimate.globalangles.repository.server.responses.get_notification.GetNotificationResponse;
 import com.ultimate.globalangles.repository.server.responses.get_one_trip.GetTripResponse;
 import com.ultimate.globalangles.repository.server.responses.get_trips.GetTripsResponse;
@@ -93,7 +94,6 @@ public interface UltimateApi {
     @GET("notifications/{id}")
     Call<GetNotificationResponse> getNotification(@Header("Authorization") String bearerAccessToken, @Path("id") String notificationId);
 
-
     @Headers({"AccessToken: " + accessToken
             , "local: " + local})
     @GET("unreads")
@@ -109,5 +109,11 @@ public interface UltimateApi {
             , "local: " + local})
     @POST("trips")
     Call<CreateTripResponse> createTrip(@Header("Authorization") String bearerAccessToken, @Body CreateTripPostBody postBody);
+
+
+    @Headers({"AccessToken: " + accessToken
+            , "local: " + local})
+    @GET("locations")
+    Call<GetLocationsResponse> getLocations(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode);
 
 }

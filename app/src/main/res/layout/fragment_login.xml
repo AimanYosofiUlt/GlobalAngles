@@ -59,6 +59,7 @@
             android:layout_marginBottom="12dp"
             android:ems="10"
             android:hint="@string/email"
+            android:text="abx2@abx.com"
             android:inputType="textEmailAddress"
             app:layout_constraintBottom_toTopOf="@+id/passwordLayout"
             app:layout_constraintEnd_toEndOf="parent"
@@ -83,6 +84,7 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:hint="@string/password"
+                android:text="123456782"
                 android:inputType="textPassword" />
         </com.google.android.material.textfield.TextInputLayout>
 

@@ -76,15 +76,15 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
 
     private void showUserBottomSheet() {
         UserTypeBottomSheet bottomSheet = new UserTypeBottomSheet(type -> {
-//            if (type.equals(SHIPPER_TYPE)) {
-//                NavHostFragment
-//                        .findNavController(this)
-//                        .navigate(LoginFragmentDirections.actionLoginToMainShipper());
-//            } else {
-//                NavHostFragment
-//                        .findNavController(this)
-//                        .navigate(LoginFragmentDirections.actionLoginToMainAngle());
-//            }
+            if (type.equals(SHIPPER_TYPE)) {
+                NavHostFragment
+                        .findNavController(this)
+                        .navigate(LoginFragmentDirections.actionLoginToHomeShipper());
+            } else {
+                NavHostFragment
+                        .findNavController(this)
+                        .navigate(LoginFragmentDirections.actionLoginToHomeAngle());
+            }
         });
 
         bottomSheet.show(requireActivity().getSupportFragmentManager(), "UserType");

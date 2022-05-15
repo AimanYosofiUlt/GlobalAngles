@@ -22,6 +22,7 @@
     <style name="spinner">
         <item name="android:background">@drawable/back_edittext2</item>
         <item name="android:textSize">14sp</item>
+        <item name="android:minHeight">40dp</item>
     </style>
 
     <style name="search_edit_text">

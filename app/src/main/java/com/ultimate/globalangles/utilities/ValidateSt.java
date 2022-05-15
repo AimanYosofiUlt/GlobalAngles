@@ -2,6 +2,10 @@ package com.ultimate.globalangles.utilities;
 
 public class ValidateSt {
     public static String bearerAccessToken = "Bearer ";
+    public static String languageCode = "en";
+
+    public static final String ARABIC = "ar";
+    public static final String ENGLISH = "en";
 
     public static final String NO_INTERNET_CONNECTION = "NO_INTERNET_CONNECTION";
     public static final String NAME_EMPTY_FILED_ERROR = "NAME_EMPTY_FILED_ERROR";

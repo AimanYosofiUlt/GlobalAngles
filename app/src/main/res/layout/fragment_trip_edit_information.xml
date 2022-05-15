@@ -127,7 +127,7 @@
             app:layout_constraintStart_toEndOf="@+id/imageView30"
             app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
 
-        <Spinner
+        <FrameLayout
             android:id="@+id/editTextTextPersonName10"
             style="@style/spinner"
             android:layout_width="0dp"
@@ -138,7 +138,14 @@
             app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName11"
             app:layout_constraintStart_toStartOf="@+id/imageView28"
             app:layout_constraintTop_toBottomOf="@+id/textView57"
-            tools:listitem="@layout/support_simple_spinner_dropdown_item" />
+            tools:listitem="@layout/support_simple_spinner_dropdown_item">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+        </FrameLayout>
 
         <EditText
             android:id="@+id/editTextTextPersonName11"
@@ -154,7 +161,7 @@
             app:layout_constraintStart_toStartOf="@+id/imageView26"
             app:layout_constraintTop_toBottomOf="@+id/textView54" />
 
-        <Spinner
+        <FrameLayout
             android:id="@+id/editTextTextPersonName12"
             style="@style/spinner"
             android:layout_width="0dp"
@@ -166,25 +173,38 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName13"
             app:layout_constraintTop_toBottomOf="@+id/textView56"
-            tools:listitem="@layout/support_simple_spinner_dropdown_item" />
+            tools:listitem="@layout/support_simple_spinner_dropdown_item">
 
-        <Spinner
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+        </FrameLayout>
+
+        <FrameLayout
             android:id="@+id/editTextTextPersonName13"
-            style="@style/spinner"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            style="@style/spinner"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:ems="10"
-            android:inputType="textPersonName"
+            android:layout_height="wrap_content"
             app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName12"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintHorizontal_chainStyle="packed"
             app:layout_constraintStart_toStartOf="@+id/imageView25"
             app:layout_constraintTop_toBottomOf="@+id/textView52"
-            tools:listitem="@layout/support_simple_spinner_dropdown_item" />
+            tools:listitem="@layout/support_simple_spinner_dropdown_item">
 
-        <Spinner
+            <Spinner
+                android:id="@+id/fromSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+        </FrameLayout>
+
+        <FrameLayout
             android:id="@+id/editTextTextPersonName14"
             style="@style/spinner"
             android:layout_width="0dp"
@@ -195,7 +215,14 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/imageView31"
             app:layout_constraintTop_toBottomOf="@+id/textView55"
-            tools:listitem="@layout/support_simple_spinner_dropdown_item" />
+            tools:listitem="@layout/support_simple_spinner_dropdown_item">
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical" />
+
+        </FrameLayout>
 
         <ImageView
             android:id="@+id/imageView26"

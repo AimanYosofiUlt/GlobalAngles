@@ -24,7 +24,7 @@
             android:layout_marginBottom="16dp"
             android:paddingTop="16dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toTopOf="@+id/button13"
+            app:layout_constraintBottom_toTopOf="@+id/addBtn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
             app:layout_constraintGuide_percent="0.1" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button13"
+            android:id="@+id/addBtn"
             style="@style/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
