@@ -7,11 +7,18 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
 import com.ultimate.globalangles.repository.local.tables.setting.Setting;
+import com.ultimate.globalangles.repository.local.tables.setting.SettingDao;
+import com.ultimate.globalangles.repository.local.tables.user.User;
+import com.ultimate.globalangles.repository.local.tables.user.UserDao;
 
 @Database(version = 1,
-        entities = {Setting.class},
+        entities = {Setting.class, User.class},
         exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
+
+    public abstract SettingDao settingDao();
+
+    public abstract UserDao userDao();
 
     public static AppDatabase INSTANCE = null;
 

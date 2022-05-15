@@ -77,33 +77,22 @@
         <LinearLayout
             android:id="@+id/lin_images"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/back_layout_radius"
+            android:layout_height="300dp"
+                android:background="@drawable/back_layout_radius"
             android:orientation="vertical"
             android:padding="10dp"
             app:layout_constraintTop_toBottomOf="@+id/inc_layout"
-            android:visibility="visible">
+            android:visibility="gone">
 
             <androidx.viewpager.widget.ViewPager
                 android:layout_width="match_parent"
-                android:layout_height="280dp"
-                android:id="@+id/view_pager"/>
+                android:layout_height="wrap_content" />
 
-            <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/dot2"
-                android:layout_marginTop="10dp"
-                app:dotsColor="@android:color/holo_red_dark"
-                app:selectedDotColor="@android:color/holo_orange_dark"
-                app:dotsSize="15dp"
-                app:dotsSpacing="5dp"
-                app:stiffness="300"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="15dp"
-                />
-
-
+            <LinearLayout
+                android:id="@+id/indicator_dots_view"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:orientation="horizontal" />
         </LinearLayout>
 
         <LinearLayout
@@ -499,10 +488,10 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp">
                         <RadioButton
-                            android:id="@+id/rd_backpack"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:button="@android:color/transparent"
+                            android:button="false"
+                            android:checked="false"
                             android:background="@drawable/back_fit_in_radio"
                             />
                         <LinearLayout
@@ -515,7 +504,6 @@
                             android:layout_centerVertical="true"
                             >
                             <ImageView
-                                android:id="@+id/rd_img_backpack"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:src="@drawable/ic_backpack"
@@ -523,7 +511,6 @@
                                 android:layout_marginRight="5dp"
                                 android:layout_marginLeft="5dp"/>
                             <TextView
-                                android:id="@+id/txt_rd_backpack"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Backpack"
@@ -541,10 +528,10 @@
                         android:layout_marginRight="10dp"
                         android:layout_marginLeft="10dp">
                         <RadioButton
-                            android:id="@+id/rd_carry_on"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:button="@android:color/transparent"
+                            android:button="false"
+                            android:checked="false"
                             android:background="@drawable/back_fit_in_radio"
                             />
 
@@ -558,7 +545,6 @@
                             android:padding="10dp">
 
                             <ImageView
-                                android:id="@+id/rd_img_carryon"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_marginLeft="5dp"
@@ -567,7 +553,6 @@
                                 app:tint="@color/external_btn_color" />
 
                             <TextView
-                                android:id="@+id/txt_carry_on"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Carry On"
@@ -581,10 +566,10 @@
                         android:layout_width="120dp"
                         android:layout_height="40dp">
                         <RadioButton
-                            android:id="@+id/rd_check_in"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:button="@android:color/transparent"
+                            android:button="false"
+                            android:checked="false"
                             android:background="@drawable/back_fit_in_radio"
                             />
 
@@ -598,7 +583,6 @@
                             android:padding="10dp">
 
                             <ImageView
-                                android:id="@+id/rd_img_checkin"
                                 android:layout_width="20dp"
                                 android:layout_height="20dp"
                                 android:layout_marginLeft="5dp"
@@ -607,7 +591,6 @@
                                 app:tint="@color/external_btn_color" />
 
                             <TextView
-                                android:id="@+id/txt_check_in"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="Check In"

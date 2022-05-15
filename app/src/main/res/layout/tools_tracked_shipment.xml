@@ -5,7 +5,8 @@
     android:layout_height="wrap_content"
     android:padding="10dp">
 
-    <ImageView
+    <include
+        layout="@layout/tools_status"
         android:id="@+id/track_shape1"
         android:layout_width="19dp"
         android:layout_height="19dp"
@@ -39,7 +40,8 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <ImageView
+    <include
+        layout="@layout/tools_status"
         android:id="@+id/track_shape2"
         android:layout_width="19dp"
         android:layout_height="19dp"

@@ -7,6 +7,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
 import com.ultimate.globalangles.repository.local.creation.AppDatabase;
+import com.ultimate.globalangles.repository.local.tables.setting.SettingDao;
+import com.ultimate.globalangles.repository.local.tables.user.UserDao;
 import com.ultimate.globalangles.repository.server.remote.UltimateApi;
 
 import java.lang.annotation.Retention;
@@ -80,6 +82,18 @@ public abstract class AppModule {
     @Provides
     public static AppDatabase provideAppDatabase(Application application) {
         return AppDatabase.getInstance(application);
+    }
+
+    @ActivityScoped
+    @Provides
+    public static SettingDao provideSettingDao(AppDatabase appDatabase) {
+        return appDatabase.settingDao();
+    }
+
+    @ActivityScoped
+    @Provides
+    public static UserDao provideUserDao(AppDatabase appDatabase) {
+        return appDatabase.userDao();
     }
 
     @ActivityScoped

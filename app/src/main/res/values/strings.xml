@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name">GlobalAngles</string>
+    <string name="facebook_app_id">330985215652293</string>
+    <string name="fb_login_protocol_scheme">fb1234</string>
+    <string name="facebook_client_token">8cb847a4eeb0d95efa57c9376c66e261</string>
+
 
     <string name="no_internet_connection">" No internet connection "</string>
     <string name="couldnt_reach_server">Couldn\'t reach the server!</string>
@@ -12,6 +16,7 @@
     <string name="machine_no_required">P_MACHINE_NO is required</string>
     <string name="pos_does_not_exist">POS does not exist !</string>
     <string name="login">Login</string>
+    <string name="loading">Loading</string>
     <string name="global_angles_temp_logo">Global\nAngles</string>
     <string name="don_t_have_an_account">Don’t have an account?</string>
     <string name="register_now">Register Now!</string>
@@ -77,6 +82,59 @@
     <string name="pending">Pending</string>
     <string name="completed">Completed</string>
     <string name="change_language">Change Language</string>
+    <string name="backpack">BackPack</string>
+    <string name="carty_on">Carty On</string>
+    <string name="check_in">Check In</string>
+    <string name="arrives">Arrives</string>
+    <string name="available_weight">Available Weight</string>
+    <string name="carry">Carry</string>
+    <string name="trip_details">Trip details</string>
+    <string name="add_trip">Add trip</string>
+    <string name="requests">Requests</string>
+    <string name="filter">Filter</string>
+    <string name="deal_status">Deal Status</string>
+    <string name="deal_made_with_an_angel">Deal made with an angel</string>
+    <string name="shopper_paid_the_reward">Shopper paid the reward</string>
+    <string name="shopper_bought_the_items">Shopper bought the items</string>
+    <string name="angel_received_the_shipment">Angel received the shipment</string>
+    <string name="ga_picked_up_the_shipment">GA picked up the shipment</string>
+    <string name="shopper_received_the_shipment">Shopper received the shipment</string>
+    <string name="categories_to_carry">Categories to carry</string>
+    <string name="trip_information">Trip information</string>
+    <string name="date_of_arrival">Date Of Arrival</string>
+    <string name="receiving_requests_till">Receiving Requests Till</string>
+    <string name="booking_reference">Booking Reference</string>
+    <string name="last_name">Last Name</string>
+    <string name="add_my_trip">Add my trip</string>
+    <string name="add_shipment">+ Add Shipment</string>
+    <string name="reward">Reward</string>
+    <string name="weight">Weight</string>
+    <string name="no_of_items">No. Of Items</string>
+    <string name="category">Category</string>
+    <string name="view_deal">View Deal</string>
+    <string name="sample_date">2022/06/30</string>
+    <string name="delivery_date">Delivery Date</string>
+    <string name="global_angel">Global Angel:</string>
+    <string name="add_another_item_to_the_shipment">+ Add another item to the shipment</string>
+    <string name="pre_orders_by">Pre-orders by</string>
+    <string name="edit_trip">Edit trip</string>
+    <string name="shipments_and_pre_orders">Shipments and pre-orders</string>
+    <string name="shipments_on_board">Shipments on board</string>
+    <string name="view_deals">View Deals</string>
+    <string name="arrival_date">Arrival Date</string>
+    <string name="booking_ref">Booking Ref.</string>
+    <string name="deals_on_this_trip">Deals on this trip</string>
+    <string name="add_pre_order_on_this_trip">+ Add pre-order on this trip</string>
+    <string name="add_new_item">Add new item</string>
+    <string name="shop_from_affiliate_store">Shop from Affiliate store</string>
+    <string name="pick_from_ga_store">Pick from GA Store</string>
+    <string name="empty_email_error">You should inter in Email</string>
+    <string name="empty_name_error">You should inter User Name</string>
+    <string name="empty_phone_error">You should inter User Phone</string>
+    <string name="not_agree_terms_error">You should agree The terms and conditions</string>
+    <string name="not_email_error">This is not an email address</string>
+    <string name="empty_password_error" >You Should Inter Your Password</string>
+    <string name="small_password_error" >Small Password not allowed</string>
 
     <!-- AffiliateFragment -->\
     <array name="countries">

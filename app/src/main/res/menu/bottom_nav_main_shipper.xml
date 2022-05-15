@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/mainShipperFragment"
-        android:title="@string/shop"
-        android:icon="@drawable/ic_shop"/>
+    <item
+        android:id="@+id/shop"
+        android:icon="@drawable/ic_shop"
+        android:title="@string/shop" />
 
-    <item android:id="@+id/shipments"
-        android:title="@string/shipments"
-        android:icon="@drawable/ic_shipments"/>
+    <item
+        android:id="@+id/shipments"
+        android:icon="@drawable/ic_shipments"
+        android:title="@string/shipments" />
 
-    <item android:id="@+id/chats"
-        android:title="@string/chats"
-        android:icon="@drawable/ic_chat"/>
+    <item
+        android:id="@+id/chats"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chats" />
 
-    <item android:id="@+id/menuFragment"
-        android:title="@string/menu"
-        android:icon="@drawable/ic_menu"/>
+    <item
+        android:id="@+id/menu"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/menu" />
 </menu>

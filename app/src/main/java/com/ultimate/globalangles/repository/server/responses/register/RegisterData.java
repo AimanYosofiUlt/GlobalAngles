@@ -28,7 +28,7 @@ public class RegisterData {
         this.token_type = token_type;
     }
 
-    public String getAccess_token() {
+    public String getAccessToken() {
         return access_token;
     }
 

@@ -1,8 +1,9 @@
 package com.ultimate.globalangles.repository.server.responses.get_one_trip;
 
 import com.google.gson.annotations.SerializedName;
-import com.ultimate.globalangles.repository.server.responses.get_trips.TripCateogries;
 import com.ultimate.globalangles.repository.server.responses.get_trips.Meta;
+import com.ultimate.globalangles.repository.server.responses.get_trips.TripCateogries;
+import com.ultimate.globalangles.repository.server.responses.get_trips.TripProduct;
 
 import java.util.List;
 
@@ -10,7 +11,7 @@ public class GetTripData {
     @SerializedName("meta")
     private Meta meta;
     @SerializedName("products")
-    private List<String> products;
+    private List<TripProduct> products;
     @SerializedName("cateogries")
     private List<TripCateogries> cateogries;
     @SerializedName("trip_created_at")
@@ -40,11 +41,11 @@ public class GetTripData {
         this.meta = meta;
     }
 
-    public List<String> getProducts() {
+    public List<TripProduct> getProducts() {
         return products;
     }
 
-    public void setProducts(List<String> products) {
+    public void setProducts(List<TripProduct> products) {
         this.products = products;
     }
 

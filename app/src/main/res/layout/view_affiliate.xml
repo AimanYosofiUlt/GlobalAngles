@@ -17,7 +17,7 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
-            android:src="@drawable/iphone_xs"
+            android:src="@drawable/ic_logo"
             android:scaleType="fitXY"/>
     </FrameLayout>
 </androidx.cardview.widget.CardView>

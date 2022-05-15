@@ -19,4 +19,5 @@ public class LayoutUtil {
             constraintLayout.animate().setDuration(1000).alpha(1);
         });
     }
+
 }

@@ -1,6 +1,9 @@
 package com.ultimate.globalangles.ui.activity.main;
 
+import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.annotation.Nullable;
 
 import com.ultimate.globalangles.databinding.ActivityMainBinding;
 import com.ultimate.globalangles.ui.base.BaseActivity;
@@ -16,6 +19,11 @@ public class MainActivity extends BaseActivity<MainActivityViewModel> {
         super.onCreate(savedInstanceState);
         bd = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(bd.getRoot());
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
     @Override

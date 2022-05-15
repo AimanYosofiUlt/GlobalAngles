@@ -9,18 +9,17 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment;
-import com.ultimate.globalangles.databinding.FragmentAddNewItemBottomSheetBinding;
+import com.ultimate.globalangles.databinding.BottomSheetAddNewItemBinding;
 
 public class AddNewItemBottomSheetFragment extends BottomSheetDialogFragment {
     private static final String TAG = "AddNewItemBottomSheetFr";
 
-    FragmentAddNewItemBottomSheetBinding bd;
-
+    BottomSheetAddNewItemBinding bd;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        bd = FragmentAddNewItemBottomSheetBinding.inflate(getLayoutInflater());
+        bd = BottomSheetAddNewItemBinding.inflate(getLayoutInflater());
 
         doSomeActions();
         return bd.getRoot();
