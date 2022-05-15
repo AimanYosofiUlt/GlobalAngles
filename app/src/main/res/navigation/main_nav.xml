@@ -12,13 +12,25 @@
         tools:layout="@layout/fragment_splashscreen">
         <action
             android:id="@+id/actionSplashScreenToLogin"
-            app:destination="@id/loginFragment" />
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/actionSplashScreenToMainAngle"
-            app:destination="@id/mainAngleFragment" />
+            app:destination="@id/mainAngleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_splashScreenFragment_to_homeMainFragment"
-            app:destination="@id/homeMainFragment" />
+            app:destination="@id/homeMainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
@@ -27,13 +39,21 @@
         tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginToMainAnglet"
-            app:destination="@id/mainAngleFragment" />
+            app:destination="@id/mainAngleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/actionLoginToRegister"
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_homeMainFragment"
-            app:destination="@id/homeMainFragment" />
+            app:destination="@id/homeMainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/mainAngleFragment"
@@ -52,10 +72,18 @@
         tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/actionRegisterToMainAngle"
-            app:destination="@id/mainAngleFragment" />
+            app:destination="@id/mainAngleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/action_registerFragment_to_homeMainFragment"
-            app:destination="@id/homeMainFragment" />
+            app:destination="@id/homeMainFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
@@ -67,4 +95,9 @@
         android:name="com.ultimate.globalangles.ui.fragment.main.HomeMainFragment"
         android:label="HomeMainFragment"
         tools:layout="@layout/fragment_home_main_layout"/>
+    <fragment
+        android:id="@+id/addShipmentFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.addShipment.AddShipmentFragment"
+        android:label="AddShipmentFragment"
+        tools:layout="@layout/fragment_add_shipment"/>
 </navigation>

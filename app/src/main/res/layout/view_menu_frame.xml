@@ -94,6 +94,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/switch_btn"
         android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -141,6 +142,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/settings_btn"
         android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -188,6 +190,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_address_btn"
         android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -235,6 +238,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/my_wallet_btn"
         android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -282,6 +286,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/help_btn"
         android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -329,6 +334,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/contact_btn"
         android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -376,6 +382,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/refer_btn"
         android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -423,6 +430,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/terms_conditions_btn"
         android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -470,6 +478,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/policy_btn"
         android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -517,6 +526,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/facebook_btn"
         android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
         >
         <RelativeLayout
             android:layout_width="match_parent"
@@ -564,6 +574,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/instagram_btn"
         android:layout_marginTop="20dp"
+        android:background="?android:attr/selectableItemBackground"
         >
         <RelativeLayout
             android:layout_width="match_parent"

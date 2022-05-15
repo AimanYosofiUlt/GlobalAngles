@@ -4,6 +4,7 @@
     <item android:drawable="@drawable/fit_in_selected_back"
         android:state_checked="true"/>
 
-    <item android:drawable="@drawable/fit_in_non_selected_back"/>
+    <item android:drawable="@drawable/fit_in_non_selected_back"
+        android:state_checked="false"/>
 
 </selector>

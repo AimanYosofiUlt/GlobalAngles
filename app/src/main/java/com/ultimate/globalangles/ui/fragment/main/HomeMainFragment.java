@@ -18,6 +18,7 @@ import com.google.android.material.navigation.NavigationBarView;
 import com.ultimate.globalangles.databinding.FragmentHomeMainLayoutBinding;
 import com.ultimate.globalangles.ui.base.BaseFragment;
 import com.ultimate.globalangles.R;
+import com.ultimate.globalangles.ui.fragment.addShipment.AddShipmentFragment;
 import com.ultimate.globalangles.ui.fragment.bottomSheet.AddNewItemBottomSheetFragment;
 import com.ultimate.globalangles.ui.fragment.main_shipper.MainShipperFragment;
 import com.ultimate.globalangles.ui.fragment.menu.MenuFragment;
@@ -78,6 +79,8 @@ public class HomeMainFragment extends BaseFragment<HomeMainFragmentViewModel> im
             replacementFragments(new MainShipperFragment());
         }else if (id == R.id.menuFragment){
             replacementFragments(new MenuFragment());
+        }else if (id == R.id.shipments){
+            replacementFragments(new AddShipmentFragment());
         }else if (id == R.id.chats){
             showBottomSheetDialog();
         }else  replacementFragments(new MainShipperFragment());

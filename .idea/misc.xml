@@ -3,6 +3,29 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/back_edittext.xml" value="0.1" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/back_edittext2.xml" value="0.1" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/back_fit_in_radio.xml" value="0.1715" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/fit_in_non_selected_back.xml" value="0.1715" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/drawable/upload_item_border.xml" value="0.1" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_add_new_item_bottom_sheet.xml" value="0.13451086956521738" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_add_new_item_to_shipment.xml" value="0.16" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_add_shipment.xml" value="0.11041666666666666" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_add_shipment_summary.xml" value="0.13451086956521738" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_address.xml" value="0.11041666666666666" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_contact_support.xml" value="0.11041666666666666" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_edit_address.xml" value="0.11041666666666666" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_help.xml" value="0.11041666666666666" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_home_main_layout.xml" value="0.13451086956521738" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_menu.xml" value="0.25" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_privacy_policy.xml" value="0.11041666666666666" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_setting.xml" value="0.11041666666666666" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_template_todelete.xml" value="0.11041666666666666" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_terms.xml" value="0.11041666666666666" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/fragment_wallet.xml" value="0.11041666666666666" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/view_menu_frame.xml" value="0.13451086956521738" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/layout/view_viewpager_item.xml" value="0.25" />
+        <entry key="..\:/GlobalAngles/app/src/main/res/menu/bottom_nav_main_shipper.xml" value="0.25" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/back_edittext.xml" value="0.19" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/drawable/click_button.xml" value="0.19" />
         <entry key="..\:/Users/Ultimate/AndroidStudioProjects/GlobalAngles/app/src/main/res/layout/activity_main.xml" value="0.21614583333333334" />
