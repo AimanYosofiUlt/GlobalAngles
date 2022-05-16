@@ -92,19 +92,19 @@ public class RegisterFragment extends BaseFragment<RegisterFragmentViewModel> {
         viewModel.validateResponseStateMDL.observe(getViewLifecycleOwner(), responseState -> {
             if (!responseState.isSuccessful()) {
                 hideProgress();
-                HandleValidateError(responseState.getMessage());
+                handleValidateError(responseState.getMessage());
             }
         });
     }
 
-    private void HandleValidateError(String message) {
+    private void handleValidateError(String message) {
         switch (message) {
-            case NAME_EMPTY_FILED_ERROR:
-                bd.nameED.setError(getString(R.string.empty_name_error));
-                break;
-
             case NO_INTERNET_CONNECTION:
                 Toast.makeText(requireContext(), getString(R.string.no_internet_connection), Toast.LENGTH_SHORT).show();
+                break;
+
+            case NAME_EMPTY_FILED_ERROR:
+                bd.nameED.setError(getString(R.string.empty_name_error));
                 break;
 
             case EMAIL_EMPTY_FILED_ERROR:

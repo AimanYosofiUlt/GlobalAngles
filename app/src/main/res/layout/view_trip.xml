@@ -19,7 +19,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView37"
+            app:layout_constraintBottom_toBottomOf="@+id/fromTV"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView36"
             app:srcCompat="@drawable/ic_from" />
@@ -28,7 +28,7 @@
             android:id="@+id/imageView20"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/textView42"
+            app:layout_constraintBottom_toBottomOf="@+id/toTV"
             app:layout_constraintEnd_toEndOf="@+id/imageView19"
             app:layout_constraintStart_toStartOf="@+id/imageView19"
             app:layout_constraintTop_toTopOf="@+id/textView38"
@@ -39,7 +39,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView48"
+            app:layout_constraintBottom_toBottomOf="@+id/arraiveTV"
             app:layout_constraintStart_toStartOf="@+id/imageView22"
             app:layout_constraintTop_toTopOf="@+id/textView41"
             app:layout_constraintVertical_bias="0.384"
@@ -50,7 +50,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="12dp"
-            app:layout_constraintBottom_toBottomOf="@+id/textView43"
+            app:layout_constraintBottom_toBottomOf="@+id/waightTV"
             app:layout_constraintEnd_toStartOf="@+id/textView39"
             app:layout_constraintTop_toTopOf="@+id/textView39"
             app:layout_constraintVertical_bias="0.482"
@@ -60,7 +60,7 @@
             android:id="@+id/imageView23"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="@+id/recyclerView3"
+            app:layout_constraintBottom_toBottomOf="@+id/categoryRV"
             app:layout_constraintStart_toStartOf="@+id/imageView20"
             app:layout_constraintTop_toTopOf="@+id/textView40"
             app:srcCompat="@drawable/ic_carry" />
@@ -79,7 +79,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView37"
+                android:id="@+id/fromTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sample_small"
@@ -99,7 +99,7 @@
             android:textSize="12sp"
             android:textStyle="normal"
             app:layout_constraintStart_toStartOf="@+id/textView36"
-            app:layout_constraintTop_toBottomOf="@+id/textView37" />
+            app:layout_constraintTop_toBottomOf="@+id/fromTV" />
 
         <TextView
             android:id="@+id/textView39"
@@ -122,8 +122,8 @@
             android:textColor="@color/text_gray"
             android:textSize="12sp"
             android:textStyle="normal"
-            app:layout_constraintStart_toStartOf="@+id/textView42"
-            app:layout_constraintTop_toBottomOf="@+id/textView42" />
+            app:layout_constraintStart_toStartOf="@+id/toTV"
+            app:layout_constraintTop_toBottomOf="@+id/toTV" />
 
         <TextView
             android:id="@+id/textView41"
@@ -140,7 +140,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/textView42"
+            android:id="@+id/toTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sample_small"
@@ -151,7 +151,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView38" />
 
         <TextView
-            android:id="@+id/textView43"
+            android:id="@+id/waightTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sample_small"
@@ -164,7 +164,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView39" />
 
         <TextView
-            android:id="@+id/textView48"
+            android:id="@+id/arraiveTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/sample_small"
@@ -177,12 +177,16 @@
             app:layout_constraintTop_toBottomOf="@+id/textView41" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerView3"
-            android:layout_width="0dp"
+            android:id="@+id/categoryRV"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:clipToPadding="false"
             android:orientation="horizontal"
+            android:paddingStart="0dp"
+            android:paddingEnd="100dp"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0"
             app:layout_constraintStart_toStartOf="@+id/textView40"
             app:layout_constraintTop_toBottomOf="@+id/textView40"
             tools:listitem="@layout/view_category" />
@@ -198,6 +202,7 @@
             app:layout_constraintTop_toTopOf="@+id/imageView21" />
 
         <include
+            android:id="@+id/bottom"
             layout="@layout/view_trip_bottom"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -205,7 +210,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/recyclerView3" />
+            app:layout_constraintTop_toBottomOf="@+id/categoryRV" />
 
         <ImageView
             android:id="@+id/imageView24"
@@ -245,9 +250,9 @@
             android:layout_height="0dp"
             android:text="Button"
             android:background="@drawable/layer_shade"
-            app:layout_constraintBottom_toBottomOf="@+id/recyclerView3"
+            app:layout_constraintBottom_toBottomOf="@+id/categoryRV"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/recyclerView3" />
+            app:layout_constraintTop_toTopOf="@+id/categoryRV" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

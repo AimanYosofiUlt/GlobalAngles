@@ -102,12 +102,12 @@ public class LoginFragment extends BaseFragment<LoginFragmentViewModel> {
         viewModel.validateResponseStateMDL.observe(getViewLifecycleOwner(), responseState -> {
             if (!responseState.isSuccessful()) {
                 hideProgress();
-                HandleValidateError(responseState.getMessage());
+                handleValidateError(responseState.getMessage());
             }
         });
     }
 
-    private void HandleValidateError(String message) {
+    private void handleValidateError(String message) {
         switch (message) {
             case NO_INTERNET_CONNECTION:
                 Toast.makeText(requireContext(), getString(R.string.no_internet_connection), Toast.LENGTH_SHORT).show();

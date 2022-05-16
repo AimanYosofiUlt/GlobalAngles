@@ -27,6 +27,19 @@ public class CreateTripPostBody {
     @SerializedName("location_id_to0")
     private int location_id_to0;
 
+    public CreateTripPostBody(List<Products> products, List<Integer> categories, String reservation_confirmation, int consumed_weight, int avaliable_weight, String total_rewards, String trip_arrive_date, String trip_date, int location_id_from0, int location_id_to0) {
+        this.products = products;
+        this.categories = categories;
+        this.reservation_confirmation = reservation_confirmation;
+        this.consumed_weight = consumed_weight;
+        this.avaliable_weight = avaliable_weight;
+        this.total_rewards = total_rewards;
+        this.trip_arrive_date = trip_arrive_date;
+        this.trip_date = trip_date;
+        this.location_id_from0 = location_id_from0;
+        this.location_id_to0 = location_id_to0;
+    }
+
     public List<Products> getProducts() {
         return products;
     }

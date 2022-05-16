@@ -1,4 +1,4 @@
-package com.ultimate.globalangles.ui.fragment.trips.views.category;
+package com.ultimate.globalangles.ui.fragment.trip_edit.view.category_checkbox;
 
 import com.ultimate.globalangles.repository.server.responses.get_category.GetCategoryData;
 

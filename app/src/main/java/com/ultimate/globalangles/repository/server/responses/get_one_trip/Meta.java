@@ -1,4 +1,4 @@
-package com.ultimate.globalangles.repository.server.responses.get_shipment;
+package com.ultimate.globalangles.repository.server.responses.get_one_trip;
 
 import com.google.gson.annotations.SerializedName;
 

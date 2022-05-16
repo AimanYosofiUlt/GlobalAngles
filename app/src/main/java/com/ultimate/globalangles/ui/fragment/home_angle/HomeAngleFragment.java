@@ -9,10 +9,12 @@ import androidx.annotation.NonNull;
 import androidx.navigation.fragment.NavHostFragment;
 
 import com.ultimate.globalangles.databinding.FragmentHomeAngleBinding;
+import com.ultimate.globalangles.repository.server.responses.get_one_trip.GetTripData;
 import com.ultimate.globalangles.ui.base.BaseFragment;
 import com.ultimate.globalangles.ui.fragment.home_angle.views.view_pager.MainViewPagerAdapter;
 import com.ultimate.globalangles.ui.fragment.trips.TripFragmentListener;
 import com.ultimate.globalangles.ui.fragment.trips.TripsFragment;
+import com.ultimate.globalangles.ui.fragment.trips.views.trip.TripViewData;
 
 import javax.annotation.Nullable;
 
@@ -51,8 +53,27 @@ public class HomeAngleFragment extends BaseFragment<HomeAngleFragmentViewModel> 
 
     private void initFragmentAdapter() {
         adapter = new MainViewPagerAdapter(requireParentFragment());
-        adapter.addFragment(new TripsFragment(() -> NavHostFragment.findNavController(requireParentFragment())
-                .navigate(HomeAngleFragmentDirections.actionHomeAngleTripEdit())));
+        adapter.addFragment(new TripsFragment(new TripFragmentListener() {
+            @Override
+            public void onAddTripReq() {
+                NavHostFragment
+                        .findNavController(requireParentFragment())
+                        .navigate(
+                                HomeAngleFragmentDirections.actionHomeAngleTripEdit()
+                                        .setIsEditMode(false)
+                        );
+            }
+
+            @Override
+            public void onTripDetailShowReq(TripViewData data) {
+                NavHostFragment
+                        .findNavController(requireParentFragment())
+                        .navigate(
+                                HomeAngleFragmentDirections
+                                        .actionHomeAngleToTripDetail().setTripData(data)
+                        );
+            }
+        }));
     }
 
     @Override

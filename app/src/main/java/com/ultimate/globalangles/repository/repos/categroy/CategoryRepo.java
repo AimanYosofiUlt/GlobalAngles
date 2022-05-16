@@ -14,6 +14,6 @@ public class CategoryRepo extends BaseRepo {
     }
 
     public void getCategory(ResponsesCallBack<GetCategoryResponse> callBack) {
-        api.getCategories(ValidateSt.bearerAccessToken).enqueue(callBack);
+        api.getCategories(ValidateSt.bearerAccessToken,ValidateSt.languageCode).enqueue(callBack);
     }
 }

@@ -28,6 +28,7 @@
         <entry key="app/src/main/res/drawable/click_gray_round12.xml" value="0.326" />
         <entry key="app/src/main/res/drawable/click_gray_round8.xml" value="0.326" />
         <entry key="app/src/main/res/drawable/ic_addnewitemsvg.xml" value="0.347" />
+        <entry key="app/src/main/res/drawable/ic_baseline_arrow_drop_down_24.xml" value="0.3805" />
         <entry key="app/src/main/res/drawable/ic_close.xml" value="0.3265" />
         <entry key="app/src/main/res/drawable/ic_from.xml" value="0.326" />
         <entry key="app/src/main/res/drawable/ic_pickonlinesvg.xml" value="0.3265" />
@@ -117,6 +118,7 @@
         <entry key="app/src/main/res/layout/view_category.xml" value="0.31209918768704575" />
         <entry key="app/src/main/res/layout/view_category_checkbox.xml" value="0.31209918768704575" />
         <entry key="app/src/main/res/layout/view_caterogy.xml" value="0.31209918768704575" />
+        <entry key="app/src/main/res/layout/view_country_spinner.xml" value="0.30141085934159895" />
         <entry key="app/src/main/res/layout/view_deal.xml" value="0.31209918768704575" />
         <entry key="app/src/main/res/layout/view_deal_ifno.xml" value="0.31209918768704575" />
         <entry key="app/src/main/res/layout/view_deal_status.xml" value="0.31209918768704575" />

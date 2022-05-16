@@ -23,10 +23,14 @@
             android:id="@+id/actionLoginToRegister"
             app:destination="@id/registerFragment" />
         <action
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
             android:id="@+id/actionLoginToHomeShipper"
             app:destination="@id/homeShipperFragment" />
         <action
             android:id="@+id/actionLoginToHomeAngle"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true"
             app:destination="@id/homeAngleFragment" />
     </fragment>
     <fragment
@@ -35,28 +39,65 @@
         android:label="RegisterFragment"
         tools:layout="@layout/fragment_register">
         <action
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true"
             android:id="@+id/actionRegisterToHomeAngle"
             app:destination="@id/homeAngleFragment" />
         <action
+            app:popUpTo="@id/registerFragment"
+            app:popUpToInclusive="true"
             android:id="@+id/actionRegisterToHomeShipper"
             app:destination="@id/homeShipperFragment" />
     </fragment>
     <fragment
         android:id="@+id/homeShipperFragment"
+        tools:layout="@layout/fragment_home_shipper"
         android:name="com.ultimate.globalangles.ui.fragment.home_shipper.HomeShipperFragment"
-        android:label="HomeShipperFragment"
-        tools:layout="@layout/fragment_home_shipper"/>
+        android:label="HomeShipperFragment" />
     <fragment
         android:id="@+id/homeAngleFragment"
-        android:name="com.ultimate.globalangles.ui.fragment.home_angle.HomeAngleFragment"
         android:label="HomeAngleFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.home_angle.HomeAngleFragment"
         tools:layout="@layout/fragment_home_angle">
         <action
             android:id="@+id/actionHomeAngleTripEdit"
-            app:destination="@id/tripEditFragment2" />
+            app:destination="@id/tripEditFragment" />
+        <action
+            android:id="@+id/actionHomeAngleToTripDetail"
+            app:destination="@id/tripDetailFragment" />
     </fragment>
     <fragment
-        android:id="@+id/tripEditFragment2"
+        android:id="@+id/tripEditFragment"
         android:name="com.ultimate.globalangles.ui.fragment.trip_edit.TripEditFragment"
-        android:label="TripEditFragment" />
+        android:label="TripEditFragment"
+        tools:layout="@layout/fragment_trip_edit">
+        <action
+            android:id="@+id/actionTripEditToNotifications"
+            app:destination="@id/notificationsFragment" />
+        <argument
+            android:name="isEditMode"
+            android:defaultValue="false" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_notifications"
+        android:id="@+id/notificationsFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.notificatios.NotificationsFragment"
+        android:label="NotificationsFragment" />
+    <fragment
+        android:id="@+id/tripDetailFragment"
+        android:name="com.ultimate.globalangles.ui.fragment.trip_detail.TripDetailFragment"
+        android:label="TripDetailFragment"
+        tools:layout="@layout/fragment_trip_detail">
+        <action
+            android:id="@+id/actionTripDetailTNotifications"
+            app:destination="@id/notificationsFragment" />
+        <argument
+            android:name="tripData"
+            app:argType="com.ultimate.globalangles.ui.fragment.trips.views.trip.TripViewData"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/actionTripDetailToTripEdit"
+            app:destination="@id/tripEditFragment" />
+    </fragment>
 </navigation>

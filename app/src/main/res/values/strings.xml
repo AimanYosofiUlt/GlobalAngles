@@ -118,6 +118,7 @@
     <string name="add_another_item_to_the_shipment">+ Add another item to the shipment</string>
     <string name="pre_orders_by">Pre-orders by</string>
     <string name="edit_trip">Edit trip</string>
+    <string name="update_trip">Update trip details</string>
     <string name="shipments_and_pre_orders">Shipments and pre-orders</string>
     <string name="shipments_on_board">Shipments on board</string>
     <string name="view_deals">View Deals</string>
@@ -135,6 +136,7 @@
     <string name="not_email_error">This is not an email address</string>
     <string name="empty_password_error" >You Should Inter Your Password</string>
     <string name="small_password_error" >Small Password not allowed</string>
+    <string name="no_available_wight_error">You should insert the available wight</string>
 
     <!-- AffiliateFragment -->\
     <array name="countries">

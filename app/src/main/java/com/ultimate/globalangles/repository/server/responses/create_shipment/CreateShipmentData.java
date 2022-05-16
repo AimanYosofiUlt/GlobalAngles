@@ -1,6 +1,7 @@
 package com.ultimate.globalangles.repository.server.responses.create_shipment;
 
 import com.google.gson.annotations.SerializedName;
+import com.ultimate.globalangles.repository.server.responses.get_one_trip.Meta;
 
 import java.util.List;
 
