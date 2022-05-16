@@ -61,7 +61,7 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toEndOf="@+id/imageView27"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName14" />
+            app:layout_constraintTop_toBottomOf="@+id/receivingDateBtn" />
 
         <TextView
             android:id="@+id/textView54"
@@ -87,7 +87,7 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toEndOf="@+id/imageView31"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10" />
+            app:layout_constraintTop_toBottomOf="@+id/arrivalDateBtn" />
 
         <TextView
             android:id="@+id/textView56"
@@ -112,7 +112,7 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toEndOf="@+id/imageView28"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />
+            app:layout_constraintTop_toBottomOf="@+id/availableWightTV" />
 
         <TextView
             android:id="@+id/textView58"
@@ -125,30 +125,45 @@
             android:textSize="14sp"
             android:textStyle="normal"
             app:layout_constraintStart_toEndOf="@+id/imageView30"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName15" />
+            app:layout_constraintTop_toBottomOf="@+id/bookingRefTV" />
 
-        <FrameLayout
-            android:id="@+id/editTextTextPersonName10"
+        <LinearLayout
+            android:id="@+id/arrivalDateBtn"
             style="@style/spinner"
+            android:clickable="true"
+            android:focusable="true"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName11"
+            app:layout_constraintEnd_toEndOf="@+id/availableWightTV"
             app:layout_constraintStart_toStartOf="@+id/imageView28"
             app:layout_constraintTop_toBottomOf="@+id/textView57"
             tools:listitem="@layout/support_simple_spinner_dropdown_item">
 
-            <Spinner
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/arrivalDateTV"
+                android:layout_width="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical" />
 
-        </FrameLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+        </LinearLayout>
 
         <EditText
-            android:id="@+id/editTextTextPersonName11"
+            android:id="@+id/availableWightTV"
             style="@style/edit_text2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -176,6 +191,7 @@
             tools:listitem="@layout/support_simple_spinner_dropdown_item">
 
             <Spinner
+                android:id="@+id/toSpinner"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical" />
@@ -204,25 +220,41 @@
 
         </FrameLayout>
 
-        <FrameLayout
-            android:id="@+id/editTextTextPersonName14"
+        <LinearLayout
+            android:id="@+id/receivingDateBtn"
+            android:clickable="true"
+            android:focusable="true"
             style="@style/spinner"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:inputType="textPersonName"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName10"
+            app:layout_constraintEnd_toEndOf="@+id/arrivalDateBtn"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/imageView31"
             app:layout_constraintTop_toBottomOf="@+id/textView55"
             tools:listitem="@layout/support_simple_spinner_dropdown_item">
 
-            <Spinner
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/receivingDateTV"
+                android:layout_width="0dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="normal"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical" />
 
-        </FrameLayout>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="8dp"
+                android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+        </LinearLayout>
 
         <ImageView
             android:id="@+id/imageView26"
@@ -280,7 +312,7 @@
             app:srcCompat="@drawable/ic_arrives" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName15"
+            android:id="@+id/bookingRefTV"
             style="@style/edit_text2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -288,12 +320,12 @@
             android:ems="10"
             android:inputType="textPersonName"
 
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName14"
+            app:layout_constraintEnd_toEndOf="@+id/receivingDateBtn"
             app:layout_constraintStart_toStartOf="@+id/imageView27"
             app:layout_constraintTop_toBottomOf="@+id/textView53" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName16"
+            android:id="@+id/lastNameTV"
             style="@style/edit_text2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -301,9 +333,8 @@
             android:layout_marginBottom="20dp"
             android:ems="10"
             android:inputType="textPersonName"
-
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName15"
+            app:layout_constraintEnd_toEndOf="@+id/bookingRefTV"
             app:layout_constraintStart_toStartOf="@+id/imageView30"
             app:layout_constraintTop_toBottomOf="@+id/textView58" />
     </androidx.constraintlayout.widget.ConstraintLayout>

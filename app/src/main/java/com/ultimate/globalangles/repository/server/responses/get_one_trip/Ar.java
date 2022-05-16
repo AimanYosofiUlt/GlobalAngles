@@ -1,8 +1,8 @@
-package com.ultimate.globalangles.repository.server.responses.get_trips;
+package com.ultimate.globalangles.repository.server.responses.get_one_trip;
 
 import com.google.gson.annotations.SerializedName;
 
-public class En {
+public class Ar {
     @SerializedName("description")
     private String description;
     @SerializedName("name")

@@ -1,11 +1,11 @@
 package com.ultimate.globalangles.ui.fragment.trip_edit.view.location;
 
-public class LocationViewData {
+public class LocationSpinnerData {
     int id;
     String name;
     int grade;
 
-    public LocationViewData(int id, String name, int grade) {
+    public LocationSpinnerData(int id, String name, int grade) {
         this.id = id;
         this.name = name;
         this.grade = grade;

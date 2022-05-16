@@ -29,90 +29,76 @@ public interface UltimateApi {
     public static final String local = "en";
     public static final String accessToken = "QrTss08To5uuYTTqER2022RMKhadia6";
 
-    @Headers({"AccessToken: " + accessToken,
-            "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @POST("login")
-    Call<LoginResponse> login(@Query("email") String email, @Query("password") String password);
+    Call<LoginResponse> login(@Header("locale") String langCode, @Query("email") String email, @Query("password") String password);
 
-    @Headers({"AccessToken: " + accessToken,
-            "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @POST("register")
-    Call<RegisterResponse> register(@Query("name") String name, @Query("user_name") String user_name
+    Call<RegisterResponse> register(@Header("locale") String langCode, @Query("name") String name, @Query("user_name") String user_name
             , @Query("email") String email, @Query("password") String password
             , @Query("password_confirmation") String password_confirmation
             , @Query("phone") String phone);
 
-    @Headers({"local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @GET("trips")
-    Call<GetTripsResponse> getTrips(@Header("Authorization") String bearerAccessToken);
+    Call<GetTripsResponse> getTrips(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode);
 
-    @Headers({"local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @GET("trips/{id}")
-    Call<GetTripResponse> getTrip(@Header("Authorization") String bearerAccessToken, @Path("id") int tripId);
+    Call<GetTripResponse> getTrip(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode, @Path("id") int tripId);
 
-
-    @Headers({"AccessToken: " + accessToken,
-            "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @GET("info")
-    Call<GetInfoResponse> getInfo(@Header("Authorization") String bearerAccessToken);
+    Call<GetInfoResponse> getInfo(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode);
 
-    @Headers({"AccessToken: " + accessToken
-            , "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @GET("productFits")
-    Call<GetAllProductFitsResponse> getAllProductAllFits(@Header("Authorization") String bearerAccessToken);
+    Call<GetAllProductFitsResponse> getAllProductAllFits(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode);
 
 
-    @Headers({"AccessToken: " + accessToken
-            , "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @GET("productFits/{id}")
-    Call<GetAllProductFitsResponse> getProductAllFit(@Header("Authorization") String bearerAccessToken, @Path("id") int fitId);
+    Call<GetAllProductFitsResponse> getProductAllFit(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode, @Path("id") int fitId);
 
-    @Headers({"AccessToken: " + accessToken
-            , "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @GET("categories")
-    Call<GetCategoryResponse> getCategories(@Header("Authorization") String bearerAccessToken);
+    Call<GetCategoryResponse> getCategories(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode);
 
 
-    @Headers({"AccessToken: " + accessToken
-            , "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @GET("categories/{id}")
-    Call<GetCategoryResponse> getCategory(@Header("Authorization") String bearerAccessToken, @Path("id") int fitId);
+    Call<GetCategoryResponse> getCategory(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode, @Path("id") int fitId);
 
 
     @Headers({"AccessToken: " + accessToken
             , "local: " + local})
     @GET("shipments")
-    Call<GetCategoryResponse> getAllShipments(@Header("Authorization") String bearerAccessToken);
+    Call<GetCategoryResponse> getAllShipments(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode);
 
-    @Headers({"AccessToken: " + accessToken
-            , "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @GET("notifications")
-    Call<GetAllNotificationsResponse> getNotifications(@Header("Authorization") String bearerAccessToken);
+    Call<GetAllNotificationsResponse> getNotifications(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode);
 
-    @Headers({"AccessToken: " + accessToken
-            , "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @GET("notifications/{id}")
-    Call<GetNotificationResponse> getNotification(@Header("Authorization") String bearerAccessToken, @Path("id") String notificationId);
+    Call<GetNotificationResponse> getNotification(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode, @Path("id") String notificationId);
 
-    @Headers({"AccessToken: " + accessToken
-            , "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @GET("unreads")
-    Call<GetUnreadNotificationsResponse> getUnreadNotifications(@Header("Authorization") String bearerAccessToken);
+    Call<GetUnreadNotificationsResponse> getUnreadNotifications(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode);
 
-    @Headers({"AccessToken: " + accessToken
-            , "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @POST("shipments")
-    Call<CreateShipmentResponse> createShipment(@Header("Authorization") String bearerAccessToken, @Body CreateShipmentPostBody postBody);
+    Call<CreateShipmentResponse> createShipment(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode, @Body CreateShipmentPostBody postBody);
 
 
-    @Headers({"AccessToken: " + accessToken
-            , "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @POST("trips")
-    Call<CreateTripResponse> createTrip(@Header("Authorization") String bearerAccessToken, @Body CreateTripPostBody postBody);
+    Call<CreateTripResponse> createTrip(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode, @Body CreateTripPostBody postBody);
 
 
-    @Headers({"AccessToken: " + accessToken
-            , "local: " + local})
+    @Headers({"AccessToken: " + accessToken})
     @GET("locations")
     Call<GetLocationsResponse> getLocations(@Header("Authorization") String bearerAccessToken, @Header("locale") String langCode);
 

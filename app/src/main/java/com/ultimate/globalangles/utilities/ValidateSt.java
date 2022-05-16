@@ -15,4 +15,7 @@ public class ValidateSt {
     public static final String SMALL_PASSWORD_ERROR = "SMALL_PASSWORD_ERROR";
     public static final String PHONE_EMPTY_FILED_ERROR = "PHONE_EMPTY_FILED_ERROR";
     public static final String NOT_AGREE_TERMS_ERROR = "NOT_AGREE_TERMS_FILED_ERROR";
+
+
+    public static final String NOT_AVAILABLE_WIGHT_TERMS_ERROR = "NOT_AVAILABLE_WIGHT_TERMS_ERROR";
 }

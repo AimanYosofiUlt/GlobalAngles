@@ -1,10 +1,8 @@
 package com.ultimate.globalangles.repository.server.responses.get_one_trip;
 
 import com.google.gson.annotations.SerializedName;
-import com.ultimate.globalangles.repository.server.responses.get_trips.Meta;
-import com.ultimate.globalangles.repository.server.responses.get_trips.TripCateogries;
-import com.ultimate.globalangles.repository.server.responses.get_trips.TripProduct;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class GetTripData {
@@ -73,7 +71,7 @@ public class GetTripData {
         this.consumed_weight = consumed_weight;
     }
 
-    public String getAvaliable_weight() {
+    public String getAvaliableWeight() {
         return avaliable_weight;
     }
 
@@ -89,7 +87,7 @@ public class GetTripData {
         this.total_rewards = total_rewards;
     }
 
-    public String getTrip_arrive_date() {
+    public String gettripArriveDate() {
         return trip_arrive_date;
     }
 
@@ -97,7 +95,7 @@ public class GetTripData {
         this.trip_arrive_date = trip_arrive_date;
     }
 
-    public String getTrip_date() {
+    public String getTripDate() {
         return trip_date;
     }
 
@@ -105,7 +103,7 @@ public class GetTripData {
         this.trip_date = trip_date;
     }
 
-    public int getLocation_id_from() {
+    public int getLocationIdFrom() {
         return location_id_from;
     }
 
@@ -113,7 +111,7 @@ public class GetTripData {
         this.location_id_from = location_id_from;
     }
 
-    public int getLocation_id_to() {
+    public int getLocationIdTo() {
         return location_id_to;
     }
 

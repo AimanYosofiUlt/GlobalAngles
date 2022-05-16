@@ -5,37 +5,28 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.ultimate.globalangles.databinding.ViewCategoryCheckboxBinding;
-import com.ultimate.globalangles.utilities.ValidateSt;
+import com.ultimate.globalangles.databinding.ViewCategoryBinding;
+import com.ultimate.globalangles.repository.server.responses.get_one_trip.TripCateogries;
 
 public class CategoryViewHolder extends RecyclerView.ViewHolder {
-    CategoryCheckData data;
+    TripCateogries data;
     CategoryViewListener listener;
-    ViewCategoryCheckboxBinding bd;
+    ViewCategoryBinding bd;
 
 
     public CategoryViewHolder(@NonNull View itemView, CategoryViewListener listener) {
         super(itemView);
-        bd = ViewCategoryCheckboxBinding.bind(itemView);
+        bd = ViewCategoryBinding.bind(itemView);
         this.listener = listener;
         initEvent();
     }
 
-    public void bind(CategoryCheckData data) {
+    public void bind(TripCateogries data) {
         this.data = data;
-        boolean isLocalArabic = ValidateSt.languageCode.equals(ValidateSt.ARABIC);
-        String title;
-        if (isLocalArabic) {
-            title = data.getData().getTranslations().get(0).getTitle();
-        } else {
-            title = data.getData().getTranslations().get(1).getTitle();
-        }
-        bd.checkBox.setText(title);
-        bd.checkBox.setChecked(data.isCheck());
+        bd.nameTV.setText(data.getTitle());
     }
 
     private void initEvent() {
-        bd.checkBox.setOnCheckedChangeListener((compoundButton, b) ->
-                listener.onCheckChange(data, bd.checkBox.isChecked()));
+
     }
 }

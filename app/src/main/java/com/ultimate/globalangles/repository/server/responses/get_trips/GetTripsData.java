@@ -1,21 +1,26 @@
-package com.ultimate.globalangles.repository.server.responses.get_shipment;
+package com.ultimate.globalangles.repository.server.responses.get_trips;
 
 import com.google.gson.annotations.SerializedName;
+import com.ultimate.globalangles.repository.server.responses.get_one_trip.GetTripData;
 import com.ultimate.globalangles.repository.server.responses.get_one_trip.Meta;
 
 import java.util.List;
 
-public class GetShipmentData {
+public class GetTripsData {
     @SerializedName("meta")
     private Meta meta;
+    @SerializedName("to")
+    private int to;
     @SerializedName("per_page")
     private int per_page;
     @SerializedName("path")
     private String path;
+    @SerializedName("from")
+    private int from;
     @SerializedName("first_page_url")
     private String first_page_url;
     @SerializedName("data")
-    private List<String> data;
+    private List<GetTripData> data;
     @SerializedName("current_page")
     private int current_page;
 
@@ -25,6 +30,14 @@ public class GetShipmentData {
 
     public void setMeta(Meta meta) {
         this.meta = meta;
+    }
+
+    public int getTo() {
+        return to;
+    }
+
+    public void setTo(int to) {
+        this.to = to;
     }
 
     public int getPer_page() {
@@ -43,6 +56,14 @@ public class GetShipmentData {
         this.path = path;
     }
 
+    public int getFrom() {
+        return from;
+    }
+
+    public void setFrom(int from) {
+        this.from = from;
+    }
+
     public String getFirst_page_url() {
         return first_page_url;
     }
@@ -51,11 +72,11 @@ public class GetShipmentData {
         this.first_page_url = first_page_url;
     }
 
-    public List<String> getData() {
+    public List<GetTripData> getData() {
         return data;
     }
 
-    public void setData(List<String> data) {
+    public void setData(List<GetTripData> data) {
         this.data = data;
     }
 

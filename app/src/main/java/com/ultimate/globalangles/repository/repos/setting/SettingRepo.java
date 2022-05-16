@@ -14,7 +14,7 @@ public class SettingRepo extends BaseRepo {
     }
 
     public void getBasicInfo(ResponsesCallBack<GetInfoResponse> callBack) {
-        api.getInfo(ValidateSt.bearerAccessToken)
+        api.getInfo(ValidateSt.bearerAccessToken,ValidateSt.languageCode)
                 .enqueue(new ResponsesCallBack<GetInfoResponse>() {
                     @Override
                     public void onSuccess(GetInfoResponse response) {

@@ -1,9 +1,8 @@
-package com.ultimate.globalangles.repository.server.responses.get_trips;
+package com.ultimate.globalangles.repository.server.responses.get_one_trip;
 
 import com.google.gson.annotations.SerializedName;
 
-public abstract class TripProduct {
-
+public class TripProduct {
     @SerializedName("product_created_at")
     private String product_created_at;
     @SerializedName("langs")

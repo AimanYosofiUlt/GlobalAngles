@@ -8,12 +8,14 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.ultimate.globalangles.R;
+import com.ultimate.globalangles.repository.server.responses.get_one_trip.GetTripData;
+import com.ultimate.globalangles.ui.fragment.trip_edit.view.location.LocationSpinnerData;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class TripAdapter extends RecyclerView.Adapter<TripViewHolder> {
-    List<String> list;
+    List<TripViewData> list;
     TripViewListener listener;
 
     public TripAdapter(TripViewListener listener) {
@@ -21,8 +23,31 @@ public class TripAdapter extends RecyclerView.Adapter<TripViewHolder> {
         this.listener = listener;
     }
 
-    public void setList(List<String> list) {
-        this.list = list;
+    public void setList(List<GetTripData> tempList, List<LocationSpinnerData> locations) {
+        list.clear();
+
+        for (GetTripData tripData : tempList) {
+            TripViewData data = new TripViewData(tripData);
+            boolean hasFromLocation = false;
+            boolean hasToLocation = false;
+            for (LocationSpinnerData location : locations) {
+                if (location.getId() == tripData.getLocationIdTo()) {
+                    data.setFromLocation(location);
+                    hasFromLocation = true;
+                    if(hasToLocation)
+                        break;
+                }
+
+                if (location.getId() == tripData.getLocationIdFrom()) {
+                    data.setToLocation(location);
+                    hasToLocation = true;
+                    if(hasFromLocation)
+                        break;
+                }
+            }
+            list.add(data);
+        }
+
         notifyDataSetChanged();
     }
 

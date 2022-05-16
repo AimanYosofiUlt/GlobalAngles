@@ -23,7 +23,7 @@
             android:padding="16dp">
 
             <include
-                android:id="@+id/button23"
+                android:id="@+id/info"
                 layout="@layout/fragment_trip_detail_info"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <include
-                android:id="@+id/button24"
+                android:id="@+id/category"
                 layout="@layout/fragment_trip_edit_categories"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -40,10 +40,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button23" />
+                app:layout_constraintTop_toBottomOf="@+id/info" />
 
             <include
-                android:id="@+id/button25"
+                android:id="@+id/shipment_preorder"
                 layout="@layout/fragment_trip_detail_pcount"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -51,10 +51,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button24" />
+                app:layout_constraintTop_toBottomOf="@+id/category" />
 
             <Button
-                android:id="@+id/button26"
+                android:id="@+id/editBtn"
                 style="@style/button"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/guideline12"
                 app:layout_constraintStart_toStartOf="@+id/guideline13"
-                app:layout_constraintTop_toBottomOf="@+id/button25" />
+                app:layout_constraintTop_toBottomOf="@+id/shipment_preorder" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline12"
